@@ -1,0 +1,1320 @@
+fileFormatVersion: 2
+guid: 1db16efe74e4bfe4c82fb6f5ab96f5b1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3901107816093939506
+    second: itty bitty gun pack - Soldier - ShoreLine_0
+  - first:
+      213: 2465044368066064420
+    second: itty bitty gun pack - Soldier - ShoreLine_1
+  - first:
+      213: 2286362205129310234
+    second: itty bitty gun pack - Soldier - ShoreLine_2
+  - first:
+      213: -6401377555841659472
+    second: itty bitty gun pack - Soldier - ShoreLine_3
+  - first:
+      213: -3225263793777829035
+    second: itty bitty gun pack - Soldier - ShoreLine_4
+  - first:
+      213: 2341125441183122565
+    second: itty bitty gun pack - Soldier - ShoreLine_5
+  - first:
+      213: -815218567052051260
+    second: itty bitty gun pack - Soldier - ShoreLine_6
+  - first:
+      213: -1516142181019910826
+    second: itty bitty gun pack - Soldier - ShoreLine_7
+  - first:
+      213: -7698523416415990734
+    second: itty bitty gun pack - Soldier - ShoreLine_8
+  - first:
+      213: 899622241098255107
+    second: itty bitty gun pack - Soldier - ShoreLine_9
+  - first:
+      213: -2056763507652452765
+    second: itty bitty gun pack - Soldier - ShoreLine_10
+  - first:
+      213: 795225291573556822
+    second: itty bitty gun pack - Soldier - ShoreLine_11
+  - first:
+      213: -6048153423937661450
+    second: itty bitty gun pack - Soldier - ShoreLine_12
+  - first:
+      213: 1341926958402933071
+    second: itty bitty gun pack - Soldier - ShoreLine_13
+  - first:
+      213: 8500407455622960418
+    second: itty bitty gun pack - Soldier - ShoreLine_14
+  - first:
+      213: 7089431016661590971
+    second: itty bitty gun pack - Soldier - ShoreLine_15
+  - first:
+      213: 5876866820180785593
+    second: itty bitty gun pack - Soldier - ShoreLine_16
+  - first:
+      213: -787062502329195704
+    second: itty bitty gun pack - Soldier - ShoreLine_17
+  - first:
+      213: -4746126289275775745
+    second: itty bitty gun pack - Soldier - ShoreLine_18
+  - first:
+      213: 1256768371069671945
+    second: itty bitty gun pack - Soldier - ShoreLine_19
+  - first:
+      213: -859314051728177777
+    second: itty bitty gun pack - Soldier - ShoreLine_20
+  - first:
+      213: 4167661976387582072
+    second: itty bitty gun pack - Soldier - ShoreLine_21
+  - first:
+      213: -4949965448460117775
+    second: itty bitty gun pack - Soldier - ShoreLine_22
+  - first:
+      213: 4204297357279992271
+    second: itty bitty gun pack - Soldier - ShoreLine_23
+  - first:
+      213: -101543355037053812
+    second: itty bitty gun pack - Soldier - ShoreLine_24
+  - first:
+      213: 793041257918413558
+    second: itty bitty gun pack - Soldier - ShoreLine_25
+  - first:
+      213: -5758059654475104334
+    second: itty bitty gun pack - Soldier - ShoreLine_26
+  - first:
+      213: -2702485664329724408
+    second: itty bitty gun pack - Soldier - ShoreLine_27
+  - first:
+      213: -6904151343356262690
+    second: itty bitty gun pack - Soldier - ShoreLine_28
+  - first:
+      213: 5331936093568683923
+    second: itty bitty gun pack - Soldier - ShoreLine_29
+  - first:
+      213: 8626579150784829842
+    second: itty bitty gun pack - Soldier - ShoreLine_30
+  - first:
+      213: -7614780004030791816
+    second: itty bitty gun pack - Soldier - ShoreLine_31
+  - first:
+      213: -2236489982512607107
+    second: itty bitty gun pack - Soldier - ShoreLine_32
+  - first:
+      213: 519424088565325310
+    second: itty bitty gun pack - Soldier - ShoreLine_33
+  - first:
+      213: -3155318238871300795
+    second: itty bitty gun pack - Soldier - ShoreLine_34
+  - first:
+      213: 8546677995469197053
+    second: itty bitty gun pack - Soldier - ShoreLine_35
+  - first:
+      213: 1602861795650192136
+    second: itty bitty gun pack - Soldier - ShoreLine_36
+  - first:
+      213: -260688121566528018
+    second: itty bitty gun pack - Soldier - ShoreLine_37
+  - first:
+      213: 6167003174303306119
+    second: itty bitty gun pack - Soldier - ShoreLine_38
+  - first:
+      213: -1232375738571508160
+    second: itty bitty gun pack - Soldier - ShoreLine_39
+  - first:
+      213: 4083395893069233105
+    second: itty bitty gun pack - Soldier - ShoreLine_40
+  - first:
+      213: 292932928472181910
+    second: itty bitty gun pack - Soldier - ShoreLine_41
+  - first:
+      213: 6608826120758826793
+    second: itty bitty gun pack - Soldier - ShoreLine_42
+  - first:
+      213: -7683673934356603591
+    second: itty bitty gun pack - Soldier - ShoreLine_43
+  - first:
+      213: -3916509715736073319
+    second: itty bitty gun pack - Soldier - ShoreLine_44
+  - first:
+      213: 1527720411609473297
+    second: itty bitty gun pack - Soldier - ShoreLine_45
+  - first:
+      213: 1161963587058788907
+    second: itty bitty gun pack - Soldier - ShoreLine_46
+  - first:
+      213: -5191764369649186431
+    second: itty bitty gun pack - Soldier - ShoreLine_47
+  - first:
+      213: -1023230317904883859
+    second: itty bitty gun pack - Soldier - ShoreLine_48
+  - first:
+      213: -8139909715895753516
+    second: itty bitty gun pack - Soldier - ShoreLine_49
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 50
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: itty bitty gun pack - Soldier - ShoreLine_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 164
+        width: 64
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23777c8c3e4832630800000000000000
+      internalID: 3901107816093939506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itty bitty gun pack - Soldier - ShoreLine_1
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 164
+        width: 65
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 420b72adac8953220800000000000000
+      internalID: 2465044368066064420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itty bitty gun pack - Soldier - ShoreLine_2
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 161
+        width: 65
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a108c98df4acabf10800000000000000
+      internalID: 2286362205129310234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itty bitty gun pack - Soldier - ShoreLine_3
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 164
+        width: 67
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bd46e6670db927a0800000000000000
+      internalID: -6401377555841659472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itty bitty gun pack - Soldier - ShoreLine_4
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 164
+        width: 64
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55b91f0faaf8d33d0800000000000000
+      internalID: -3225263793777829035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itty bitty gun pack - Soldier - ShoreLine_5
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 161
+        width: 64
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58489585f295d7020800000000000000
+      internalID: 2341125441183122565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itty bitty gun pack - Soldier - ShoreLine_6
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 164
+        width: 62
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cc3f805803cfa4f0800000000000000
+      internalID: -815218567052051260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itty bitty gun pack - Soldier - ShoreLine_7
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 164
+        width: 62
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65d725f18b495fae0800000000000000
+      internalID: -1516142181019910826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itty bitty gun pack - Soldier - ShoreLine_8
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 161
+        width: 65
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23c8f75cdb9592590800000000000000
+      internalID: -7698523416415990734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itty bitty gun pack - Soldier - ShoreLine_9
+      rect:
+        serializedVersion: 2
+        x: 1219
+        y: 167
+        width: 61
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30bc3b079a91c7c00800000000000000
+      internalID: 899622241098255107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itty bitty gun pack - Soldier - ShoreLine_10
+      rect:
+        serializedVersion: 2
+        x: 1313
+        y: 164
+        width: 58
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36e936bac78e473e0800000000000000
+      internalID: -2056763507652452765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itty bitty gun pack - Soldier - ShoreLine_11
+      rect:
+        serializedVersion: 2
+        x: 1474
+        y: 161
+        width: 61
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 656f5ac7035390b00800000000000000
+      internalID: 795225291573556822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itty bitty gun pack - Soldier - ShoreLine_12
+      rect:
+        serializedVersion: 2
+        x: 1617
+        y: 164
+        width: 65
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f512236184a01ca0800000000000000
+      internalID: -6048153423937661450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itty bitty gun pack - Soldier - ShoreLine_13
+      rect:
+        serializedVersion: 2
+        x: 1711
+        y: 161
+        width: 61
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f419026757b7f9210800000000000000
+      internalID: 1341926958402933071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itty bitty gun pack - Soldier - ShoreLine_14
+      rect:
+        serializedVersion: 2
+        x: 1831
+        y: 161
+        width: 103
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2251d763b8387f570800000000000000
+      internalID: 8500407455622960418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itty bitty gun pack - Soldier - ShoreLine_15
+      rect:
+        serializedVersion: 2
+        x: 2019
+        y: 170
+        width: 61
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb320cfb2f7b26260800000000000000
+      internalID: 7089431016661590971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itty bitty gun pack - Soldier - ShoreLine_16
+      rect:
+        serializedVersion: 2
+        x: 2112
+        y: 167
+        width: 62
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b9b7296c33de8150800000000000000
+      internalID: 5876866820180785593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itty bitty gun pack - Soldier - ShoreLine_17
+      rect:
+        serializedVersion: 2
+        x: 2206
+        y: 161
+        width: 129
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84363acf2dac315f0800000000000000
+      internalID: -787062502329195704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itty bitty gun pack - Soldier - ShoreLine_18
+      rect:
+        serializedVersion: 2
+        x: 2417
+        y: 167
+        width: 64
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff41394394f522eb0800000000000000
+      internalID: -4746126289275775745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itty bitty gun pack - Soldier - ShoreLine_19
+      rect:
+        serializedVersion: 2
+        x: 2511
+        y: 161
+        width: 61
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90add82cc20f07110800000000000000
+      internalID: 1256768371069671945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itty bitty gun pack - Soldier - ShoreLine_20
+      rect:
+        serializedVersion: 2
+        x: 2607
+        y: 161
+        width: 123
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f858d3c3c6a1314f0800000000000000
+      internalID: -859314051728177777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itty bitty gun pack - Soldier - ShoreLine_21
+      rect:
+        serializedVersion: 2
+        x: 2815
+        y: 164
+        width: 65
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 878fb7e7c7286d930800000000000000
+      internalID: 4167661976387582072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itty bitty gun pack - Soldier - ShoreLine_22
+      rect:
+        serializedVersion: 2
+        x: 2909
+        y: 164
+        width: 65
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f8d31296a03e4bb0800000000000000
+      internalID: -4949965448460117775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itty bitty gun pack - Soldier - ShoreLine_23
+      rect:
+        serializedVersion: 2
+        x: 3205
+        y: 164
+        width: 76
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc999cecb2aa85a30800000000000000
+      internalID: 4204297357279992271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itty bitty gun pack - Soldier - ShoreLine_24
+      rect:
+        serializedVersion: 2
+        x: 3299
+        y: 164
+        width: 76
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8c07b94bde379ef0800000000000000
+      internalID: -101543355037053812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itty bitty gun pack - Soldier - ShoreLine_25
+      rect:
+        serializedVersion: 2
+        x: 3612
+        y: 164
+        width: 68
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fab47682d2710b00800000000000000
+      internalID: 793041257918413558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itty bitty gun pack - Soldier - ShoreLine_26
+      rect:
+        serializedVersion: 2
+        x: 3706
+        y: 161
+        width: 67
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bfb08370434710b0800000000000000
+      internalID: -5758059654475104334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itty bitty gun pack - Soldier - ShoreLine_27
+      rect:
+        serializedVersion: 2
+        x: 4017
+        y: 164
+        width: 64
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80e8a0f4b97de7ad0800000000000000
+      internalID: -2702485664329724408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itty bitty gun pack - Soldier - ShoreLine_28
+      rect:
+        serializedVersion: 2
+        x: 4110
+        y: 161
+        width: 62
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed6c6b7dee68f20a0800000000000000
+      internalID: -6904151343356262690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itty bitty gun pack - Soldier - ShoreLine_29
+      rect:
+        serializedVersion: 2
+        x: 4418
+        y: 164
+        width: 61
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39fce3690a7def940800000000000000
+      internalID: 5331936093568683923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itty bitty gun pack - Soldier - ShoreLine_30
+      rect:
+        serializedVersion: 2
+        x: 4512
+        y: 161
+        width: 61
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29912553804c7b770800000000000000
+      internalID: 8626579150784829842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itty bitty gun pack - Soldier - ShoreLine_31
+      rect:
+        serializedVersion: 2
+        x: 4816
+        y: 164
+        width: 65
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87f3ff06eedd25690800000000000000
+      internalID: -7614780004030791816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itty bitty gun pack - Soldier - ShoreLine_32
+      rect:
+        serializedVersion: 2
+        x: 4913
+        y: 161
+        width: 59
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d70dd98d53466f0e0800000000000000
+      internalID: -2236489982512607107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itty bitty gun pack - Soldier - ShoreLine_33
+      rect:
+        serializedVersion: 2
+        x: 5218
+        y: 164
+        width: 61
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efd97bed47d553700800000000000000
+      internalID: 519424088565325310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itty bitty gun pack - Soldier - ShoreLine_34
+      rect:
+        serializedVersion: 2
+        x: 5312
+        y: 161
+        width: 61
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 545d3c287ce0634d0800000000000000
+      internalID: -3155318238871300795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itty bitty gun pack - Soldier - ShoreLine_35
+      rect:
+        serializedVersion: 2
+        x: 5616
+        y: 164
+        width: 65
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfec699ca56eb9670800000000000000
+      internalID: 8546677995469197053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itty bitty gun pack - Soldier - ShoreLine_36
+      rect:
+        serializedVersion: 2
+        x: 5710
+        y: 161
+        width: 61
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80346c19f428e3610800000000000000
+      internalID: 1602861795650192136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itty bitty gun pack - Soldier - ShoreLine_37
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 38
+        width: 64
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eedfcdcd889d16cf0800000000000000
+      internalID: -260688121566528018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itty bitty gun pack - Soldier - ShoreLine_38
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 38
+        width: 58
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7811e0d76b8959550800000000000000
+      internalID: 6167003174303306119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itty bitty gun pack - Soldier - ShoreLine_39
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 38
+        width: 70
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 046b2a09bc8b5eee0800000000000000
+      internalID: -1232375738571508160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itty bitty gun pack - Soldier - ShoreLine_40
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 38
+        width: 67
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1db3ea31ee22ba830800000000000000
+      internalID: 4083395893069233105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itty bitty gun pack - Soldier - ShoreLine_41
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 38
+        width: 71
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69c699842f4b01400800000000000000
+      internalID: 292932928472181910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itty bitty gun pack - Soldier - ShoreLine_42
+      rect:
+        serializedVersion: 2
+        x: 1061
+        y: 38
+        width: 73
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 927172e775447bb50800000000000000
+      internalID: 6608826120758826793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itty bitty gun pack - Soldier - ShoreLine_43
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 32
+        width: 65
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93d1fbc344b1e5590800000000000000
+      internalID: -7683673934356603591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itty bitty gun pack - Soldier - ShoreLine_44
+      rect:
+        serializedVersion: 2
+        x: 1456
+        y: 35
+        width: 70
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99b6f220a23c5a9c0800000000000000
+      internalID: -3916509715736073319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itty bitty gun pack - Soldier - ShoreLine_45
+      rect:
+        serializedVersion: 2
+        x: 1688
+        y: 23
+        width: 61
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 111a812ce9d833510800000000000000
+      internalID: 1527720411609473297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itty bitty gun pack - Soldier - ShoreLine_46
+      rect:
+        serializedVersion: 2
+        x: 1854
+        y: 32
+        width: 77
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2ae390e9bf102010800000000000000
+      internalID: 1161963587058788907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itty bitty gun pack - Soldier - ShoreLine_47
+      rect:
+        serializedVersion: 2
+        x: 2104
+        y: 23
+        width: 61
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 189c78d10d523f7b0800000000000000
+      internalID: -5191764369649186431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itty bitty gun pack - Soldier - ShoreLine_48
+      rect:
+        serializedVersion: 2
+        x: 2268
+        y: 26
+        width: 79
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6f8ed97271ccc1f0800000000000000
+      internalID: -1023230317904883859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itty bitty gun pack - Soldier - ShoreLine_49
+      rect:
+        serializedVersion: 2
+        x: 2505
+        y: 23
+        width: 61
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d468409d3b390f80800000000000000
+      internalID: -8139909715895753516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
