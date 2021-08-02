@@ -1,19 +1,16 @@
 fileFormatVersion: 2
-guid: 10c0cf36e01980541a09ca9fbd086450
+guid: 1a1f1fdca8390c14db96992193423570
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7460046300004610927
-    second: Jump_0
+      213: -7854629474860912292
+    second: Damage_0
   - first:
-      213: 7034338576483803127
-    second: Jump_1
+      213: -6941875414966023432
+    second: Damage_1
   - first:
-      213: 6054277451648750542
-    second: Jump_2
-  - first:
-      213: 6937500446539429301
-    second: Jump_3
+      213: -5657879152074187224
+    second: Damage_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -115,13 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Jump_0
+      name: Damage_0
       rect:
         serializedVersion: 2
-        x: 423
-        y: 342
-        width: 127
-        height: 205
+        x: 372
+        y: 416
+        width: 102
+        height: 176
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -129,20 +126,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f63fdb7b598678760800000000000000
-      internalID: 7460046300004610927
+      spriteID: c513a94bb10cef290800000000000000
+      internalID: -7854629474860912292
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_1
+      name: Damage_1
       rect:
         serializedVersion: 2
-        x: 637
-        y: 339
-        width: 128
-        height: 213
+        x: 540
+        y: 417
+        width: 93
+        height: 175
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +147,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7ffd4217aadfe9160800000000000000
-      internalID: 7034338576483803127
+      spriteID: 8facee7f61189af90800000000000000
+      internalID: -6941875414966023432
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Jump_2
+      name: Damage_2
       rect:
         serializedVersion: 2
-        x: 826
-        y: 337
-        width: 132
-        height: 219
+        x: 689
+        y: 416
+        width: 91
+        height: 162
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,29 +168,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec35e2de34d150450800000000000000
-      internalID: 6054277451648750542
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Jump_3
-      rect:
-        serializedVersion: 2
-        x: 1005
-        y: 342
-        width: 121
-        height: 213
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5b5b81156e3f64060800000000000000
-      internalID: 6937500446539429301
+      spriteID: 82e978e43ec2b71b0800000000000000
+      internalID: -5657879152074187224
       vertices: []
       indices: 
       edges: []
