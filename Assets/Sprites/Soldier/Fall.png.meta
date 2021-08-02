@@ -112,27 +112,6 @@ TextureImporter:
       name: Fall_0
       rect:
         serializedVersion: 2
-        x: 655
-        y: 349
-        width: 114
-        height: 215
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a81c98d660d423da0800000000000000
-      internalID: -5966621866309598838
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fall_1
-      rect:
-        serializedVersion: 2
         x: 813
         y: 348
         width: 123
@@ -144,8 +123,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 47d561f1b60e843e0800000000000000
-      internalID: -2069157278089061004
+      spriteID: a81c98d660d423da0800000000000000
+      internalID: -5966621866309598838
       vertices: []
       indices: 
       edges: []
