@@ -1,34 +1,34 @@
 fileFormatVersion: 2
-guid: 75f4a919bf793e24a95fb0fa1246f370
+guid: 9d8791f521285fb438079356717c895e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1544846452725136913
-    second: So_0
+      213: 2269992260431915163
+    second: medic walk_0
   - first:
-      213: -8982601475606719870
-    second: So_1
+      213: -779165111750109864
+    second: medic walk_1
   - first:
-      213: 3935548411822532757
-    second: So_2
+      213: 6658786401390620620
+    second: medic walk_2
   - first:
-      213: 4554807644208903851
-    second: So_3
+      213: 8083313568810316232
+    second: medic walk_3
   - first:
-      213: 8541022160244943451
-    second: So_4
+      213: 3211178210600526188
+    second: medic walk_4
   - first:
-      213: -1541513601985774774
-    second: Roll_0
+      213: 7140536634676039726
+    second: medic walk_5
   - first:
-      213: -7983745396288232634
-    second: Roll_1
+      213: 442296496340683567
+    second: medic walk_6
   - first:
-      213: -7351514667388473569
-    second: Roll_2
+      213: -5002419539061489784
+    second: medic walk_7
   - first:
-      213: 5034399978413682347
-    second: Roll_3
+      213: 69675472410476607
+    second: medic walk_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -130,13 +130,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Roll_0
+      name: medic walk_0
       rect:
         serializedVersion: 2
-        x: 55
-        y: 49
-        width: 59
-        height: 74
+        x: 243
+        y: 318
+        width: 140
+        height: 229
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,20 +144,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4b7439db817b9ae0800000000000000
-      internalID: -1541513601985774774
+      spriteID: b982ee51fe1a08f10800000000000000
+      internalID: 2269992260431915163
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Roll_1
+      name: medic walk_1
       rect:
         serializedVersion: 2
-        x: 176
-        y: 53
-        width: 77
-        height: 60
+        x: 437
+        y: 315
+        width: 143
+        height: 232
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,20 +165,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 643641d9cd9043190800000000000000
-      internalID: -7983745396288232634
+      spriteID: 855d1c48579df25f0800000000000000
+      internalID: -779165111750109864
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Roll_2
+      name: medic walk_2
       rect:
         serializedVersion: 2
-        x: 327
-        y: 52
-        width: 67
-        height: 56
+        x: 638
+        y: 312
+        width: 134
+        height: 232
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -186,20 +186,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1f6c392c5c2af990800000000000000
-      internalID: -7351514667388473569
+      spriteID: ccfe61ac3f2c86c50800000000000000
+      internalID: 6658786401390620620
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Roll_3
+      name: medic walk_3
       rect:
         serializedVersion: 2
-        x: 461
-        y: 48
-        width: 71
-        height: 57
+        x: 833
+        y: 309
+        width: 130
+        height: 233
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -207,8 +207,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: baee4926b18cdd540800000000000000
-      internalID: 5034399978413682347
+      spriteID: 8c1b8051dd2bd2070800000000000000
+      internalID: 8083313568810316232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: medic walk_4
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 306
+        width: 129
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c61a159a195609c20800000000000000
+      internalID: 3211178210600526188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: medic walk_5
+      rect:
+        serializedVersion: 2
+        x: 1215
+        y: 301
+        width: 136
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e20578fac38481360800000000000000
+      internalID: 7140536634676039726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: medic walk_6
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 293
+        width: 143
+        height: 249
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2b49cde15a532600800000000000000
+      internalID: 442296496340683567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: medic walk_7
+      rect:
+        serializedVersion: 2
+        x: 1589
+        y: 288
+        width: 136
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88f34c4eee5d39ab0800000000000000
+      internalID: -5002419539061489784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: medic walk_8
+      rect:
+        serializedVersion: 2
+        x: 1748
+        y: 290
+        width: 136
+        height: 248
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f308596197987f000800000000000000
+      internalID: 69675472410476607
       vertices: []
       indices: 
       edges: []
