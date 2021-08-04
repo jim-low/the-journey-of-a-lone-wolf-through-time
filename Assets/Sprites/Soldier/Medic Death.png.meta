@@ -1,22 +1,19 @@
 fileFormatVersion: 2
-guid: b701015e101cc034fac131bd870aaec1
+guid: 8fae1f868ef330346a0b8eeecd57ccba
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1815625823664879899
-    second: Die_0
+      213: -3448975308702367832
+    second: Medic Death_0
   - first:
-      213: 8754631090437682804
-    second: Die_1
+      213: 13999757637534852
+    second: Medic Death_1
   - first:
-      213: 5542297916538816281
-    second: Die_2
+      213: -4519925143241730807
+    second: Medic Death_2
   - first:
-      213: -1778436320341457493
-    second: Die_3
-  - first:
-      213: 2941528559377587764
-    second: Die_4
+      213: 5954778962327523875
+    second: Medic Death_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -118,11 +115,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Die_0
+      name: Medic Death_0
       rect:
         serializedVersion: 2
-        x: 431
-        y: 418
+        x: 588
+        y: 412
         width: 84
         height: 148
       alignment: 0
@@ -132,35 +129,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e6cd67dee99dc6e0800000000000000
-      internalID: -1815625823664879899
+      spriteID: 8afb3bdea37c220d0800000000000000
+      internalID: -3448975308702367832
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Die_1
-      rect:
-        serializedVersion: 2
-        x: 588
-        y: 417
-        width: 82
-        height: 140
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 476f02db792be7970800000000000000
-      internalID: 8754631090437682804
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Die_2
+      name: Medic Death_1
       rect:
         serializedVersion: 2
         x: 728
@@ -174,14 +150,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9170faa37923aec40800000000000000
-      internalID: 5542297916538816281
+      spriteID: 4844de494bcb13000800000000000000
+      internalID: 13999757637534852
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Die_3
+      name: Medic Death_2
       rect:
         serializedVersion: 2
         x: 857
@@ -195,14 +171,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba50566d699b157e0800000000000000
-      internalID: -1778436320341457493
+      spriteID: 90558b1a7000641c0800000000000000
+      internalID: -4519925143241730807
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Die_4
+      name: Medic Death_3
       rect:
         serializedVersion: 2
         x: 998
@@ -216,8 +192,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 43e1e5ec3a862d820800000000000000
-      internalID: 2941528559377587764
+      spriteID: 322508d9aef93a250800000000000000
+      internalID: 5954778962327523875
       vertices: []
       indices: 
       edges: []
