@@ -1,34 +1,28 @@
 fileFormatVersion: 2
-guid: 75f4a919bf793e24a95fb0fa1246f370
+guid: 1b81769b709c0be4c8544399718b4d65
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1544846452725136913
-    second: So_0
+      213: -725676847703976320
+    second: Rolling_0
   - first:
-      213: -8982601475606719870
-    second: So_1
+      213: 2804552036436801705
+    second: Rolling_1
   - first:
-      213: 3935548411822532757
-    second: So_2
+      213: 246690345009715882
+    second: Rolling_2
   - first:
-      213: 4554807644208903851
-    second: So_3
+      213: 4914790032895607488
+    second: Rolling_3
   - first:
-      213: 8541022160244943451
-    second: So_4
+      213: 8957890312988738062
+    second: Rolling_4
   - first:
-      213: -1541513601985774774
-    second: Roll_0
+      213: 728715001442487571
+    second: Rolling_5
   - first:
-      213: -7983745396288232634
-    second: Roll_1
-  - first:
-      213: -7351514667388473569
-    second: Roll_2
-  - first:
-      213: 5034399978413682347
-    second: Roll_3
+      213: 291541445017753677
+    second: Rolling_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -130,11 +124,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Roll_0
+      name: Rolling_0
       rect:
         serializedVersion: 2
-        x: 55
-        y: 49
+        x: 17
+        y: 53
         width: 59
         height: 74
       alignment: 0
@@ -144,18 +138,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4b7439db817b9ae0800000000000000
-      internalID: -1541513601985774774
+      spriteID: 08611e670c0ede5f0800000000000000
+      internalID: -725676847703976320
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Roll_1
+      name: Rolling_1
       rect:
         serializedVersion: 2
-        x: 176
-        y: 53
+        x: 99
+        y: 57
         width: 77
         height: 60
       alignment: 0
@@ -165,18 +159,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 643641d9cd9043190800000000000000
-      internalID: -7983745396288232634
+      spriteID: 9a8f9edc735cbe620800000000000000
+      internalID: 2804552036436801705
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Roll_2
+      name: Rolling_2
       rect:
         serializedVersion: 2
-        x: 327
-        y: 52
+        x: 203
+        y: 57
         width: 67
         height: 56
       alignment: 0
@@ -186,20 +180,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1f6c392c5c2af990800000000000000
-      internalID: -7351514667388473569
+      spriteID: aaa92dfcf8b6c6300800000000000000
+      internalID: 246690345009715882
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Roll_3
+      name: Rolling_3
       rect:
         serializedVersion: 2
-        x: 461
-        y: 48
-        width: 71
-        height: 57
+        x: 304
+        y: 53
+        width: 66
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -207,8 +201,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: baee4926b18cdd540800000000000000
-      internalID: 5034399978413682347
+      spriteID: 0c28f58ce77d43440800000000000000
+      internalID: 4914790032895607488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rolling_4
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 54
+        width: 58
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e024b9a57c1d05c70800000000000000
+      internalID: 8957890312988738062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rolling_5
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 52
+        width: 73
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31d4a73de6aec1a00800000000000000
+      internalID: 728715001442487571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rolling_6
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 51
+        width: 67
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d48569b4663cb0400800000000000000
+      internalID: 291541445017753677
       vertices: []
       indices: 
       edges: []
