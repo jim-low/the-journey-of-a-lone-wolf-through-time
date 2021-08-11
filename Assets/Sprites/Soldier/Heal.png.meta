@@ -1,28 +1,16 @@
 fileFormatVersion: 2
-guid: 6f0de5ab65c90574da463c24b943887a
+guid: 9e451678db7872649a0e80035b071014
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2903848411162822477
-    second: Heal_0
+      213: -8287650901645349780
+    second: pixil-frame-0 (11)_0
   - first:
-      213: -893675218100121079
-    second: Heal_1
+      213: -7726129009250017613
+    second: pixil-frame-0 (11)_1
   - first:
-      213: 2928916444087662039
-    second: Heal_2
-  - first:
-      213: -1398132742003509683
-    second: Heal_3
-  - first:
-      213: 5238786112167760410
-    second: Heal_4
-  - first:
-      213: -2599149563224560162
-    second: Heal_5
-  - first:
-      213: 5951998098815178954
-    second: Heal_6
+      213: 8114160052359388354
+    second: pixil-frame-0 (11)_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -124,13 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Heal_0
+      name: pixil-frame-0 (11)_0
       rect:
         serializedVersion: 2
-        x: 913
-        y: 333
-        width: 198
-        height: 237
+        x: 12
+        y: 81
+        width: 43
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -138,20 +126,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4741f4aeba8c4820800000000000000
-      internalID: 2903848411162822477
+      spriteID: c6cabf03a695cfc80800000000000000
+      internalID: -8287650901645349780
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heal_1
+      name: pixil-frame-0 (11)_1
       rect:
         serializedVersion: 2
-        x: 1170
-        y: 334
-        width: 195
-        height: 279
+        x: 69
+        y: 80
+        width: 42
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,20 +147,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9029290cf170993f0800000000000000
-      internalID: -893675218100121079
+      spriteID: 3bedfc2d99647c490800000000000000
+      internalID: -7726129009250017613
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heal_2
+      name: pixil-frame-0 (11)_2
       rect:
         serializedVersion: 2
-        x: 1417
-        y: 333
-        width: 198
-        height: 265
+        x: 126
+        y: 78
+        width: 45
+        height: 49
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -180,8 +168,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d535a2ecf995a820800000000000000
-      internalID: 2928916444087662039
+      spriteID: 2ccdb83b3994b9070800000000000000
+      internalID: 8114160052359388354
       vertices: []
       indices: 
       edges: []
