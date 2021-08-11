@@ -3,6 +3,7 @@ guid: 901720c2cd981f5489ee03c8d7fb7157
 TextureImporter:
   internalIDToNameTable:
   - first:
+<<<<<<< Updated upstream
       213: -4129041442308449352
     second: crouch_0
   - first:
@@ -14,6 +15,19 @@ TextureImporter:
   - first:
       213: -5477599203237680634
     second: crouch_3
+=======
+      213: -9111046860271459987
+    second: Crouch_0
+  - first:
+      213: -2502152054627867837
+    second: Crouch_1
+  - first:
+      213: 6538706784403912789
+    second: Crouch_2
+  - first:
+      213: 1760784323390296859
+    second: Crouch_3
+>>>>>>> Stashed changes
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -100,7 +114,11 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
+<<<<<<< Updated upstream
     buildTarget: WebGL
+=======
+    buildTarget: Windows Store Apps
+>>>>>>> Stashed changes
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -115,6 +133,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
+<<<<<<< Updated upstream
       name: crouch_0
       rect:
         serializedVersion: 2
@@ -122,6 +141,15 @@ TextureImporter:
         y: 435
         width: 108
         height: 168
+=======
+      name: Crouch_0
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 432
+        width: 112
+        height: 203
+>>>>>>> Stashed changes
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -129,13 +157,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< Updated upstream
       spriteID: 8bb96505fa2b2b6c0800000000000000
       internalID: -4129041442308449352
+=======
+      spriteID: d61e499272f0f8180800000000000000
+      internalID: -9111046860271459987
+>>>>>>> Stashed changes
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
+<<<<<<< Updated upstream
       name: crouch_1
       rect:
         serializedVersion: 2
@@ -143,6 +177,15 @@ TextureImporter:
         y: 434
         width: 96
         height: 162
+=======
+      name: Crouch_1
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 437
+        width: 109
+        height: 195
+>>>>>>> Stashed changes
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,13 +193,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< Updated upstream
       spriteID: cf99eb86331f36f80800000000000000
       internalID: -8114376900488553988
+=======
+      spriteID: 34364e996f1964dd0800000000000000
+      internalID: -2502152054627867837
+>>>>>>> Stashed changes
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
+<<<<<<< Updated upstream
       name: crouch_2
       rect:
         serializedVersion: 2
@@ -164,6 +213,15 @@ TextureImporter:
         y: 435
         width: 95
         height: 133
+=======
+      name: Crouch_2
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 434
+        width: 113
+        height: 197
+>>>>>>> Stashed changes
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,13 +229,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< Updated upstream
       spriteID: 73f21b30a5948a120800000000000000
       internalID: 2425269050296839991
+=======
+      spriteID: 558f4d64d272eba50800000000000000
+      internalID: 6538706784403912789
+>>>>>>> Stashed changes
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
+<<<<<<< Updated upstream
       name: crouch_3
       rect:
         serializedVersion: 2
@@ -185,6 +249,15 @@ TextureImporter:
         y: 434
         width: 89
         height: 117
+=======
+      name: Crouch_3
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 436
+        width: 110
+        height: 195
+>>>>>>> Stashed changes
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,8 +265,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< Updated upstream
       spriteID: 60a2e05db88abf3b0800000000000000
       internalID: -5477599203237680634
+=======
+      spriteID: b1351c953009f6810800000000000000
+      internalID: 1760784323390296859
+>>>>>>> Stashed changes
       vertices: []
       indices: 
       edges: []

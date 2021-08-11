@@ -67,7 +67,7 @@ TextureImporter:
   spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 50
+  spritePixelsToUnits: 22
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -120,6 +120,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -127,16 +139,16 @@ TextureImporter:
       name: Rolling_0
       rect:
         serializedVersion: 2
-        x: 17
-        y: 53
-        width: 59
-        height: 74
+        x: 13
+        y: 54
+        width: 80
+        height: 85
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
       spriteID: 08611e670c0ede5f0800000000000000
       internalID: -725676847703976320
@@ -148,10 +160,10 @@ TextureImporter:
       name: Rolling_1
       rect:
         serializedVersion: 2
-        x: 99
+        x: 100
         y: 57
-        width: 77
-        height: 60
+        width: 80
+        height: 85
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,10 +181,10 @@ TextureImporter:
       name: Rolling_2
       rect:
         serializedVersion: 2
-        x: 203
-        y: 57
-        width: 67
-        height: 56
+        x: 196
+        y: 55
+        width: 80
+        height: 85
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,10 +202,10 @@ TextureImporter:
       name: Rolling_3
       rect:
         serializedVersion: 2
-        x: 304
-        y: 53
-        width: 66
-        height: 72
+        x: 292
+        y: 56
+        width: 80
+        height: 85
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -211,10 +223,10 @@ TextureImporter:
       name: Rolling_4
       rect:
         serializedVersion: 2
-        x: 400
-        y: 54
-        width: 58
-        height: 67
+        x: 388
+        y: 60
+        width: 80
+        height: 85
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -232,10 +244,10 @@ TextureImporter:
       name: Rolling_5
       rect:
         serializedVersion: 2
-        x: 495
-        y: 52
-        width: 73
-        height: 65
+        x: 491
+        y: 55
+        width: 80
+        height: 85
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -253,10 +265,10 @@ TextureImporter:
       name: Rolling_6
       rect:
         serializedVersion: 2
-        x: 599
-        y: 51
-        width: 67
-        height: 60
+        x: 591
+        y: 54
+        width: 80
+        height: 85
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -273,7 +285,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 25d077862349f3c47b6c69cf7ffc90c9
     internalID: 0
     vertices: []
     indices: 
