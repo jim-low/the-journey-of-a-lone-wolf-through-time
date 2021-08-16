@@ -24,8 +24,14 @@ public class Movement : MonoBehaviour
     void Update()
     {
         Move();
-        Jump();
-        Slide();
+
+        if (!onGround && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space))) {
+            Jump();
+        }
+
+        if (horizontalDir != 0 && Input.GetKeyDown(KeyCode.LeftControl)) {
+            Slide();
+        }
     }
 
     void Move()
@@ -36,24 +42,21 @@ public class Movement : MonoBehaviour
 
     void Jump()
     {
-        if (!onGround)
+        if (!onGround) {
             return;
-
-        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)) {
-            rigidBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            onGround = false;
-            Debug.Log("jumpinggggggggggg");
         }
+
+        rigidBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        onGround = false;
     }
 
     void Slide()
     {
-        if (horizontalDir == 0)
+        if (horizontalDir == 0) {
             return;
-
-        if (Input.GetKeyDown(KeyCode.LeftControl)) {
-            rigidBody.AddForce(Vector2.right * slidingSpeed * horizontalDir * Time.deltaTime, ForceMode2D.Impulse);
         }
+
+        rigidBody.AddForce(Vector2.right * slidingSpeed * horizontalDir * Time.deltaTime, ForceMode2D.Impulse);
     }
 
     void OnCollisionEnter2D(Collision2D collided)

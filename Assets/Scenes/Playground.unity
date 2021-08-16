@@ -5491,6 +5491,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1047434697, guid: 357b04dfb35b44f428364e3e8c10fd6a, type: 3}
+      propertyPath: m_Name
+      value: Weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 1203537532, guid: 357b04dfb35b44f428364e3e8c10fd6a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 24389113418368842, guid: 357b04dfb35b44f428364e3e8c10fd6a, type: 3}
       propertyPath: m_RootOrder
       value: 2
