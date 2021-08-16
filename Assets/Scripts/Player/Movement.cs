@@ -7,11 +7,13 @@ public class Movement : MonoBehaviour
 
     public float moveSpeed = 1f;
     public float jumpForce = 5f;
+    public float slidingSpeed = 20f;
 
     private SpriteRenderer sr;
     private Rigidbody2D rigidBody;
 
-    bool onGround = false;
+    bool onGround = true;
+    float horizontalDir;
 
     void Start()
     {
@@ -23,13 +25,13 @@ public class Movement : MonoBehaviour
     {
         Move();
         Jump();
-        FaceDirection();
+        Slide();
     }
 
     void Move()
     {
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        transform.position += new Vector3(horizontal, 0, 0) * moveSpeed * Time.deltaTime;
+        horizontalDir = Input.GetAxisRaw("Horizontal");
+        transform.position += new Vector3(horizontalDir, 0, 0) * moveSpeed * Time.deltaTime;
     }
 
     void Jump()
@@ -40,32 +42,18 @@ public class Movement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)) {
             rigidBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             onGround = false;
+            Debug.Log("jumpinggggggggggg");
         }
     }
 
-    void FaceDirection()
+    void Slide()
     {
-        Vector3 mousePos = Input.mousePosition;
-        Vector3 playerPos = Camera.main.WorldToScreenPoint(transform.position);
-        Vector3 playerToMouse = mousePos - playerPos;
+        if (horizontalDir == 0)
+            return;
 
-        Vector3 playerScale = transform.localScale;
-        GameObject weapon = GameObject.Find("Weapon");
-        Vector3 weaponScale = weapon.transform.localScale;
-
-        if (playerToMouse.x < 0) {
-            playerScale.x = -Mathf.Abs(playerScale.x);
-            weaponScale.x = -Mathf.Abs(weaponScale.x);
-            weaponScale.y = -Mathf.Abs(weaponScale.y);
+        if (Input.GetKeyDown(KeyCode.LeftControl)) {
+            rigidBody.AddForce(Vector2.right * slidingSpeed * horizontalDir * Time.deltaTime, ForceMode2D.Impulse);
         }
-        else if (playerToMouse.x > 0) {
-            playerScale.x = Mathf.Abs(playerScale.x);
-            weaponScale.x = Mathf.Abs(weaponScale.x);
-            weaponScale.y = Mathf.Abs(weaponScale.y);
-        }
-
-        transform.localScale = playerScale;
-        weapon.transform.localScale = weaponScale;
     }
 
     void OnCollisionEnter2D(Collision2D collided)
