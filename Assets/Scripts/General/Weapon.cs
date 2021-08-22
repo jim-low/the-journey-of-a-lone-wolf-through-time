@@ -14,7 +14,6 @@ public class Weapon : MonoBehaviour
     {
         weaponPosition = GameObject.Find("Weapon").GetComponent<Transform>();
         weaponSprite = GameObject.Find("Weapon").GetComponentInChildren<SpriteRenderer>();
-        Debug.Log(weaponSprite.sprite.name);
     }
 
     void Update()
