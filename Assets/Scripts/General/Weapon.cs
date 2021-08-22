@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    private Transform weapon;
     public Transform firePoint;
     public LineRenderer bulletLine;
 
+    private Transform weaponPosition;
+    private SpriteRenderer weaponSprite;
+
     void Awake()
     {
-        weapon = transform.Find("Weapon");
+        weaponPosition = GameObject.Find("Weapon").GetComponent<Transform>();
+        weaponSprite = GameObject.Find("Weapon").GetComponentInChildren<SpriteRenderer>();
+        Debug.Log(weaponSprite.sprite.name);
     }
 
     void Update()
@@ -26,8 +30,9 @@ public class Weapon : MonoBehaviour
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3 aimDirection = (mousePos - transform.position).normalized;
         float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
-        weapon.eulerAngles = new Vector3(0, 0, angle);
-        /* Debug.Log(angle); */
+
+        weaponSprite.flipY = Mathf.Abs(angle) > 90;
+        weaponPosition.eulerAngles = new Vector3(0, 0, angle);
     }
 
     IEnumerator Shoot()
