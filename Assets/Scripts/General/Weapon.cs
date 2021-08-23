@@ -1,27 +1,54 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Weapon : MonoBehaviour
 {
+    public int ammo = 30;
+    public float reloadTime = 2f;
+
     public Transform firePoint;
     public LineRenderer bulletLine;
+    public TextMeshProUGUI reloadText;
 
     private Transform weaponPosition;
     private SpriteRenderer weaponSprite;
 
+    const int MAX_AMMO = 30;
+    bool hasAmmo = true;
+    bool needReload = false;
+
     void Awake()
     {
-        weaponPosition = GameObject.Find("Weapon").GetComponent<Transform>();
-        weaponSprite = GameObject.Find("Weapon").GetComponentInChildren<SpriteRenderer>();
+        weaponPosition = GameObject.Find("Rifle").GetComponent<Transform>();
+        weaponSprite = GameObject.Find("Rifle").GetComponentInChildren<SpriteRenderer>();
     }
 
     void Update()
     {
         Aim();
-        if (Input.GetMouseButtonDown(0)) {
+
+        Debug.Log("hasAmmo = " + hasAmmo);
+        Debug.Log("reloading = " + needReload);
+
+        if (hasAmmo && Input.GetMouseButtonDown(0)) {
             StartCoroutine(Shoot());
         }
+
+        if (needReload) {
+            StartCoroutine(Reload());
+        }
+    }
+
+    IEnumerator Reload()
+    {
+        reloadText.text = "Reloading...";
+        needReload = false;
+        yield return new WaitForSeconds(reloadTime);
+        ammo = MAX_AMMO;
+        hasAmmo = true;
+        reloadText.text = "";
     }
 
     void Aim()
@@ -50,5 +77,12 @@ public class Weapon : MonoBehaviour
         bulletLine.enabled = true;
         yield return new WaitForSeconds(0.02f);
         bulletLine.enabled = false;
+
+        --ammo;
+        Debug.Log("ammo = " + ammo);
+        if (ammo <= 0) {
+            hasAmmo = false;
+            needReload = true;
+        }
     }
 }

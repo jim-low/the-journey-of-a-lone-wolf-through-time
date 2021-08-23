@@ -5571,6 +5571,14 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 24389113418368852, guid: 357b04dfb35b44f428364e3e8c10fd6a, type: 3}
+      propertyPath: rollDist
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 24389113418368852, guid: 357b04dfb35b44f428364e3e8c10fd6a, type: 3}
+      propertyPath: slidingSpeed
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 24389113418368855, guid: 357b04dfb35b44f428364e3e8c10fd6a, type: 3}
       propertyPath: m_Name
       value: Player
