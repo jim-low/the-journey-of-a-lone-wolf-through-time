@@ -11,6 +11,7 @@ public class Weapon : MonoBehaviour
     public Transform firePoint;
     public LineRenderer bulletLine;
     public TextMeshProUGUI reloadText;
+    public TextMeshProUGUI ammoText;
 
     private Transform weaponPosition;
     private SpriteRenderer weaponSprite;
@@ -29,26 +30,27 @@ public class Weapon : MonoBehaviour
     {
         Aim();
 
-        Debug.Log("hasAmmo = " + hasAmmo);
-        Debug.Log("reloading = " + needReload);
+        UpdateWeapon();
 
         if (hasAmmo && Input.GetMouseButtonDown(0)) {
             StartCoroutine(Shoot());
         }
 
-        if (needReload) {
+        if (needReload || Input.GetKeyDown(KeyCode.R)) {
             StartCoroutine(Reload());
         }
     }
 
     IEnumerator Reload()
     {
-        reloadText.text = "Reloading...";
-        needReload = false;
-        yield return new WaitForSeconds(reloadTime);
-        ammo = MAX_AMMO;
-        hasAmmo = true;
-        reloadText.text = "";
+        if (ammo < MAX_AMMO) {
+            needReload = false;
+            reloadText.text = "Reloading...";
+            yield return new WaitForSeconds(reloadTime);
+            ammo = MAX_AMMO;
+            hasAmmo = true;
+            reloadText.text = "";
+        }
     }
 
     void Aim()
@@ -79,10 +81,15 @@ public class Weapon : MonoBehaviour
         bulletLine.enabled = false;
 
         --ammo;
-        Debug.Log("ammo = " + ammo);
+    }
+
+    void UpdateWeapon()
+    {
         if (ammo <= 0) {
-            hasAmmo = false;
             needReload = true;
+            hasAmmo = false;
         }
+
+        ammoText.text = ammo + " / " + MAX_AMMO;
     }
 }
