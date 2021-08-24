@@ -22,8 +22,9 @@ public class Weapon : MonoBehaviour
 
     void Awake()
     {
-        weaponPosition = GameObject.Find("Rifle").GetComponent<Transform>();
-        weaponSprite = GameObject.Find("Rifle").GetComponentInChildren<SpriteRenderer>();
+        GameObject rifle = GameObject.Find("Rifle");
+        weaponPosition = rifle.GetComponent<Transform>();
+        weaponSprite = rifle.GetComponentInChildren<SpriteRenderer>();
     }
 
     void Update()
