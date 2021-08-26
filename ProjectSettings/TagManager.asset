@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Effect
   - Ground
+  - Gun
+  - Slider
   layers:
   - Default
   - TransparentFX
@@ -45,4 +47,7 @@ TagManager:
     locked: 0
   - name: Soldier
     uniqueID: 516416649
+    locked: 0
+  - name: UI
+    uniqueID: 2664970111
     locked: 0
