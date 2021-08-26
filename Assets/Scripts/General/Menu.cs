@@ -17,6 +17,11 @@ public class Menu : MonoBehaviour
 
     bool settingsOn = false;
 
+    void Awake()
+    {
+        music = GetComponent<AudioSource>();
+    }
+
     public void StartGame()
     {
         SceneManager.LoadScene("Ground");
