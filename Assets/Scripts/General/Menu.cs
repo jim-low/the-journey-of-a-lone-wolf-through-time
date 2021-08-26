@@ -27,6 +27,10 @@ public class Menu : MonoBehaviour
         music.volume = BGMSlider.value;
     }
 
+    public void SetSoundEffectVolume()
+    {
+    }
+
     public void ToggleSettings()
     {
         settingsOn = !settingsOn;
