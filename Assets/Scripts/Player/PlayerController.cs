@@ -42,7 +42,8 @@ public class PlayerController : MonoBehaviour
         if (!rolling && onGround && Input.GetKeyDown(KeyCode.LeftShift)) {
             rolling = true;
             rollDestination = transform.position;
-            rollDestination.x += rollDist;
+            rollDist = sr.flipX ? -Mathf.Abs(rollDist) : Mathf.Abs(rollDist);
+            rollDestination.x += (rollDist);
             StartCoroutine(StopRoll(0.5f));
         }
 
@@ -80,9 +81,6 @@ public class PlayerController : MonoBehaviour
     {
         const float rollScalar = 2f;
         float rollSpeed = moveSpeed * rollScalar * Time.deltaTime;
-        /* if (sr.flipX) { // if looking left, roll left */
-        /*     rollSpeed = Mathf.Abs(rollSpeed) * -1; */
-        /* } */
 
         transform.position = Vector3.MoveTowards(transform.position, rollDestination, rollSpeed);
     }
