@@ -32,11 +32,6 @@ public class Gun : MonoBehaviour
         reloadText = GameObject.Find("ReloadText").GetComponent<TextMeshProUGUI>();
         ammoInfoText = GameObject.Find("WeaponAmmo").GetComponent<TextMeshProUGUI>();
         bulletLine = GameObject.Find("BulletLine").GetComponent<LineRenderer>();
-
-        Debug.Log(MAX_AMMO);
-        Debug.Log(reloadText);
-        Debug.Log(ammoInfoText);
-        Debug.Log(bulletLine);
     }
 
     void Update()
@@ -102,3 +97,4 @@ public class Gun : MonoBehaviour
         ammoInfoText.text = ammo + " / " + MAX_AMMO;
     }
 }
+
