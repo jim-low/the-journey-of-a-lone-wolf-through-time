@@ -46,6 +46,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Door
+    uniqueID: 828917203
+    locked: 0
   - name: Soldier
     uniqueID: 516416649
     locked: 0
