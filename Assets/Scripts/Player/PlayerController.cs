@@ -8,19 +8,23 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 5f;
     public float slidingSpeed = 10f;
     public float rollDist = 7f;
+    public GameObject grenadePrefab;
 
     private Vector3 rollDestination;
     private SpriteRenderer sr;
     private Rigidbody2D rigidBody;
+    private GameObject grenadeLaunchPoint;
 
     bool onGround = true;
     bool rolling = false;
     float horizontalDir;
+    float grenadeThrowForce = 15f;
 
     void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
+        grenadeLaunchPoint = GameObject.Find("GrenadeLaunchPoint");
     }
 
     void Update()
@@ -47,6 +51,10 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(StopRoll(0.5f));
         }
 
+        /* if (Input.GetKeyDown(KeyCode.G)) { */
+        /*     ThrowGrenade(); */
+        /* } */
+
         if (rolling) {
             Roll();
         }
@@ -71,6 +79,27 @@ public class PlayerController : MonoBehaviour
         float angle = Mathf.Atan2(mouseDirection.y, mouseDirection.x) * Mathf.Rad2Deg;
         sr.flipX = Mathf.Abs(angle) > 90;
     }
+
+    /* void ThrowGrenade() */
+    /* { */
+    /*     // calculate throw angle */
+    /*     Vector3 grenadeLaunchPos = Camera.main.ScreenToWorldPoint(grenadeLaunchPoint.transform.position); */
+    /*     Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition); */
+    /*     float grenadeThrowAngle = Mathf.Atan2(mousePos.y - grenadeLaunchPos.y, mousePos.x - grenadeLaunchPos.x) * Mathf.Rad2Deg; */
+    /*     Debug.Log(grenadeThrowAngle); */
+
+    /*     // set grenade start position */
+    /*     GameObject grenade = Instantiate(grenadePrefab); */
+    /*     grenade.transform.position = gameObject.transform.position; */
+
+    /*     // set grenade velocity */
+    /*     Vector2 grenadeVelocity = Vector2.one * grenadeThrowForce; */
+    /*     // TODO: correctly calculate throw angle */
+    /*     grenadeVelocity.x += Mathf.Cos(grenadeThrowAngle); */
+    /*     grenadeVelocity.y += Mathf.Sin(grenadeThrowAngle); */
+    /*     grenade.GetComponent<Rigidbody2D>().velocity = grenadeVelocity; */
+    /*     Debug.Log(grenadeVelocity); */
+    /* } */
 
     IEnumerator StopRoll(float stopTime) {
         yield return new WaitForSeconds(stopTime);
