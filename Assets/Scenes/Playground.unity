@@ -18983,6 +18983,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1720526539139982643, guid: 357b04dfb35b44f428364e3e8c10fd6a, type: 3}
   m_PrefabInstance: {fileID: 1720526540931527975}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2110083805
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2110083806}
+  m_Layer: 0
+  m_Name: GrenadeLaunchPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2110083806
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110083805}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.09, y: 0.27, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2059980820}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2139656344
 GameObject:
   m_ObjectHideFlags: 0
@@ -19121,6 +19151,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1720526539139982644, guid: 357b04dfb35b44f428364e3e8c10fd6a, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1720526539139982645, guid: 357b04dfb35b44f428364e3e8c10fd6a, type: 3}
       propertyPath: jumpForce
       value: 10
@@ -19129,5 +19163,9 @@ PrefabInstance:
       propertyPath: moveSpeed
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 1720526539139982645, guid: 357b04dfb35b44f428364e3e8c10fd6a, type: 3}
+      propertyPath: grenadePrefab
+      value: 
+      objectReference: {fileID: 9207076736827742451, guid: 3bc4c64436feccc5098fb8fd054035c2, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 357b04dfb35b44f428364e3e8c10fd6a, type: 3}
