@@ -79,7 +79,8 @@ public class Gun : MonoBehaviour
 
         Vector2 bulletDestination = hitInfo ? (Vector2)hitInfo.point : (Vector2)(firePoint.position + firePoint.right * 100);
         bulletLine.SetPosition(1, bulletDestination);
-
+        int randomDigits = Random.Range(-1, 1);
+        bulletLine.SetPosition(1, new Vector2(bulletDestination.x , bulletDestination.y + randomDigits));
         bulletLine.enabled = true;
         yield return new WaitForSeconds(0.02f);
         bulletLine.enabled = false;

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public Animator animator;
     public float moveSpeed = 1f;
     public float jumpForce = 5f;
     public float slidingSpeed = 10f;
@@ -17,6 +18,7 @@ public class PlayerController : MonoBehaviour
 
     bool onGround = true;
     bool rolling = false;
+    bool prone = true;
     float horizontalDir;
     float grenadeThrowForce = 15f;
 
@@ -29,22 +31,29 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        animator.SetFloat("Horizontal", Mathf.Abs(horizontalDir));
+
         FaceDirection();
 
         if (!rolling) {
+            animator.SetBool("isRolling", false);
             Move();
         }
 
         if (onGround && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space))) {
             Jump();
+            animator.SetBool("isJumping", true);
         }
 
         if (horizontalDir != 0 && Input.GetKeyDown(KeyCode.LeftControl)) {
+            animator.SetBool("isSlide", true);
             Slide();
         }
 
         if (!rolling && onGround && Input.GetKeyDown(KeyCode.LeftShift)) {
+            
             rolling = true;
+            
             rollDestination = transform.position;
             rollDist = sr.flipX ? -Mathf.Abs(rollDist) : Mathf.Abs(rollDist);
             rollDestination.x += (rollDist);
@@ -56,14 +65,23 @@ public class PlayerController : MonoBehaviour
         /* } */
 
         if (rolling) {
+            animator.SetBool("isRolling", true);
             Roll();
         }
+
+        if(onGround && Input.GetKeyDown(KeyCode.C))
+        {
+            Prone();
+        }
+
+        
     }
 
     void Move()
     {
         horizontalDir = Input.GetAxisRaw("Horizontal");
         transform.position += new Vector3(horizontalDir, 0, 0) * moveSpeed * Time.deltaTime;
+        
     }
 
     void Jump()
@@ -105,6 +123,12 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(stopTime);
         rolling = false;
     }
+    IEnumerator StopSlide(float stopTime)
+    {
+        yield return new WaitForSeconds(stopTime);
+        animator.SetBool("isSlide", false);
+    }
+    
 
     void Roll()
     {
@@ -117,10 +141,28 @@ public class PlayerController : MonoBehaviour
     void Slide()
     {
         rigidBody.AddForce(Vector2.right * slidingSpeed * horizontalDir, ForceMode2D.Impulse);
+        StartCoroutine(StopSlide(1.2f));
     }
+    void Prone()
+    {
+        
+        if (prone)
+        {
+            animator.SetBool("isProne", true);
+            prone = false;
+        }
+        else
+        {
+            animator.SetBool("isProne", false);
+            prone = true;
+        }
+
+    }
+       
 
     void OnCollisionEnter2D(Collision2D collided)
     {
+        animator.SetBool("isJumping", false);
         onGround = true;
     }
 }
