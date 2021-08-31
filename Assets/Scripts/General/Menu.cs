@@ -6,20 +6,31 @@ using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {
-    public GameObject settingsMenu;
-    public GameObject mainMenu;
-    public Slider BGMSlider;
+    private GameObject settingsMenu;
+    private GameObject helpMenu;
+    private GameObject mainMenu;
 
+    public Slider BGMSlider;
     // TODO: find out how to set game sound effect
     public Slider soundEffectSlider;
 
     public AudioSource music;
 
     bool settingsOn = false;
+    bool helpOn = false;
 
     void Awake()
     {
         music = GetComponent<AudioSource>();
+    }
+
+    void Start()
+    {
+        mainMenu = GameObject.Find("MainMenuContainer");
+        helpMenu = GameObject.Find("HowToPlayContainer");
+        settingsMenu = GameObject.Find("SettingsContainer");
+        helpMenu.SetActive(false);
+        settingsMenu.SetActive(false);
     }
 
     public void StartGame()
@@ -34,6 +45,14 @@ public class Menu : MonoBehaviour
 
     public void SetSoundEffectVolume()
     {
+    }
+
+    public void ToggleHowToPlay()
+    {
+        helpOn = !helpOn;
+
+        helpMenu.SetActive(helpOn);
+        mainMenu.SetActive(!helpOn);
     }
 
     public void ToggleSettings()
