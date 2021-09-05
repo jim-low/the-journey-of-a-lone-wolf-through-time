@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class Soldier : MonoBehaviour
@@ -14,10 +15,18 @@ public class Soldier : MonoBehaviour
     private static GameObject floatingTextPrefab;
     private static GameObject popUpTexts;
 
+    private Slider playerHealthSlider;
+
     void Awake()
     {
         floatingTextPrefab = (GameObject)Resources.Load("FloatingText", typeof(GameObject));
         popUpTexts = GameObject.Find("PopUpTexts");
+    }
+
+    void Start()
+    {
+        playerHealthSlider = GameObject.Find("PlayerHealth").GetComponent<Slider>();
+        playerHealthSlider.maxValue = playerHealthSlider.value = MAX_HEALTH;
     }
 
     void Update()
@@ -61,6 +70,10 @@ public class Soldier : MonoBehaviour
 
     private IEnumerator DestroyText(GameObject textObject)
     {
+        if (playerHealthSlider != null) {
+            playerHealthSlider.value = health;
+        }
+
         yield return new WaitForSeconds(FADE_TIME);
         Destroy(textObject);
     }
