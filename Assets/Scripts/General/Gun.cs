@@ -13,6 +13,7 @@ public class Gun : MonoBehaviour
     private int MAX_AMMO = 30;
 
     public int ammo;
+    public float damage = 15f;
     public float reloadTime = 1.25f;
     public static TextMeshProUGUI reloadText;
     public static TextMeshProUGUI ammoInfoText;
@@ -24,7 +25,6 @@ public class Gun : MonoBehaviour
     void Start()
     {
         ammo = MAX_AMMO;
-
         weaponPosition = GetComponent<Transform>();
         weaponSprite = GetComponentInChildren<SpriteRenderer>();
         firePoint = GameObject.Find(gameObject.name + "FirePoint").transform;

@@ -282,6 +282,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MAX_AMMO: 30
   ammo: 30
+  damage: 15
   reloadTime: 1.25
 --- !u!1 &946611303
 GameObject:
@@ -674,6 +675,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1333554054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333554047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75e6596e651685c9ea532ad51a44e365, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  floatingText: {fileID: 0}
 --- !u!1 &1359647541
 GameObject:
   m_ObjectHideFlags: 0
@@ -17998,6 +18013,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MAX_AMMO: 12
   ammo: 12
+  damage: 8
   reloadTime: 1.25
 --- !u!1 &1642459788
 GameObject:

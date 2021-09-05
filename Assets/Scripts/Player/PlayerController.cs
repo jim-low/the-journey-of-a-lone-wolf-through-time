@@ -51,9 +51,9 @@ public class PlayerController : MonoBehaviour
         }
 
         if (!rolling && onGround && Input.GetKeyDown(KeyCode.LeftShift)) {
-            
+
             rolling = true;
-            
+
             rollDestination = transform.position;
             rollDist = sr.flipX ? -Mathf.Abs(rollDist) : Mathf.Abs(rollDist);
             rollDestination.x += (rollDist);
@@ -74,20 +74,24 @@ public class PlayerController : MonoBehaviour
             Prone();
         }
 
-        
+
     }
 
     void Move()
     {
         horizontalDir = Input.GetAxisRaw("Horizontal");
         transform.position += new Vector3(horizontalDir, 0, 0) * moveSpeed * Time.deltaTime;
-        
+
     }
 
     void Jump()
     {
         rigidBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         onGround = false;
+
+        Soldier soldier = gameObject.GetComponent<Soldier>();
+        float damage = Weapon.currentWeapon.GetComponent<Gun>().damage;
+        Soldier.Damage(soldier, damage);
     }
 
     void FaceDirection()
@@ -128,7 +132,7 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(stopTime);
         animator.SetBool("isSlide", false);
     }
-    
+
 
     void Roll()
     {
@@ -145,7 +149,7 @@ public class PlayerController : MonoBehaviour
     }
     void Prone()
     {
-        
+
         if (prone)
         {
             animator.SetBool("isProne", true);
@@ -158,7 +162,7 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-       
+
 
     void OnCollisionEnter2D(Collision2D collided)
     {
