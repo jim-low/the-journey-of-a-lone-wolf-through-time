@@ -30,7 +30,7 @@ public class Gun : MonoBehaviour
         firePoint = GameObject.Find(gameObject.name + "FirePoint").transform;
 
         reloadText = GameObject.Find("ReloadText").GetComponent<TextMeshProUGUI>();
-        ammoInfoText = GameObject.Find("WeaponAmmo").GetComponent<TextMeshProUGUI>();
+        ammoInfoText = GameObject.Find("AmmoText").GetComponent<TextMeshProUGUI>();
         bulletLine = GameObject.Find("BulletLine").GetComponent<LineRenderer>();
     }
 
