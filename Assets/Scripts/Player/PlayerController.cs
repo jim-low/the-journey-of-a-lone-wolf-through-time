@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer sr;
     private Rigidbody2D rigidBody;
     private GameObject grenadeLaunchPoint;
+    private Soldier soldier;
 
     bool onGround = true;
     bool rolling = false;
@@ -24,6 +25,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        soldier = GetComponent<Soldier>();
         rigidBody = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         grenadeLaunchPoint = GameObject.Find("GrenadeLaunchPoint");
@@ -73,8 +75,6 @@ public class PlayerController : MonoBehaviour
         {
             Prone();
         }
-
-
     }
 
     void Move()
@@ -88,10 +88,6 @@ public class PlayerController : MonoBehaviour
     {
         rigidBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         onGround = false;
-
-        Soldier soldier = gameObject.GetComponent<Soldier>();
-        float damage = Weapon.currentWeapon.GetComponent<Gun>().damage;
-        Soldier.Damage(soldier, damage);
     }
 
     void FaceDirection()

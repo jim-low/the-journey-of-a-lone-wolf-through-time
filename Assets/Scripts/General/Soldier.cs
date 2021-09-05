@@ -6,11 +6,19 @@ using TMPro;
 public class Soldier : MonoBehaviour
 {
     private const float MAX_HEALTH = 100f;
+    private const float FADE_TIME = .5f;
 
     [SerializeField]
     private float health = MAX_HEALTH;
 
-    public TextMeshPro floatingText;
+    private static GameObject floatingTextPrefab;
+    private static GameObject popUpTexts;
+
+    void Awake()
+    {
+        floatingTextPrefab = (GameObject)Resources.Load("FloatingText", typeof(GameObject));
+        popUpTexts = GameObject.Find("PopUpTexts");
+    }
 
     void Update()
     {
@@ -19,16 +27,42 @@ public class Soldier : MonoBehaviour
         }
     }
 
-    public static void Damage(Soldier soldier, float damage)
+    public void Damage(float damage)
     {
-        /* floatingText.text = ("- " + damage); */
-        soldier.health -= damage;
+        health -= damage;
+
+        // get object references
+        GameObject floatingTextObject = Instantiate(floatingTextPrefab, transform.position, Quaternion.identity, popUpTexts.transform);
+        TextMeshProUGUI floatingText = floatingTextObject.GetComponent<TextMeshProUGUI>();
+
+        // set text and color
+        floatingText.text = "-" + damage;
+        floatingText.color = Color.red;
+
+        // start countdown to destroy text
+        StartCoroutine(DestroyText(floatingTextObject));
     }
 
-    public static void Heal(Soldier soldier, float healAmount)
+    public void Heal(float healAmount)
     {
-        /* floatingText.text = ("+ " + healAmount); */
-        soldier.health += healAmount;
+        health += healAmount;
+
+        // get object references
+        GameObject floatingTextObject = Instantiate(floatingTextPrefab, transform.position, Quaternion.identity, popUpTexts.transform);
+        TextMeshProUGUI floatingText = floatingTextObject.GetComponent<TextMeshProUGUI>();
+
+        // set text and color
+        floatingText.text = "+" + healAmount;
+        floatingText.color = Color.green;
+
+        // start countdown to destroy text
+        DestroyText(floatingTextObject);
+    }
+
+    private IEnumerator DestroyText(GameObject textObject)
+    {
+        yield return new WaitForSeconds(FADE_TIME);
+        Destroy(textObject);
     }
 
     private void Die()
