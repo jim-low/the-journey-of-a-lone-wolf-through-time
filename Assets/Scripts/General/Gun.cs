@@ -15,12 +15,14 @@ public class Gun : MonoBehaviour
     public int ammo;
     public float damage = 15f;
     public float reloadTime = 1.25f;
+    public float firingRate = 0.2f;
     public static TextMeshProUGUI reloadText;
     public static TextMeshProUGUI ammoInfoText;
     public static LineRenderer bulletLine;
 
     bool hasAmmo = true;
     bool needReload = false;
+    bool canShoot = true;
 
     void Start()
     {
@@ -40,7 +42,7 @@ public class Gun : MonoBehaviour
 
         UpdateWeapon();
 
-        if (hasAmmo && Input.GetMouseButtonDown(0)) {
+        if (canShoot && hasAmmo && Input.GetMouseButton(0)) {
             StartCoroutine(Shoot());
         }
 
@@ -55,9 +57,10 @@ public class Gun : MonoBehaviour
             needReload = false;
             reloadText.text = "Reloading...";
             yield return new WaitForSeconds(reloadTime);
+            reloadText.text = "";
             ammo = MAX_AMMO;
             hasAmmo = true;
-            reloadText.text = "";
+            canShoot = true;
         }
     }
 
@@ -73,6 +76,10 @@ public class Gun : MonoBehaviour
 
     IEnumerator Shoot()
     {
+        if (!canShoot) {
+            yield return null;
+        }
+
         RaycastHit2D hitInfo = Physics2D.Raycast(firePoint.position, firePoint.right);
 
         bulletLine.SetPosition(0, firePoint.position);
@@ -81,11 +88,22 @@ public class Gun : MonoBehaviour
         bulletLine.SetPosition(1, bulletDestination);
         int randomDigits = Random.Range(-1, 1);
         bulletLine.SetPosition(1, new Vector2(bulletDestination.x , bulletDestination.y + randomDigits));
+
+        canShoot = false;
+
         bulletLine.enabled = true;
         yield return new WaitForSeconds(0.02f);
         bulletLine.enabled = false;
 
         --ammo;
+
+        StartCoroutine(Recoil());
+    }
+
+    IEnumerator Recoil()
+    {
+        yield return new WaitForSeconds(firingRate);
+        canShoot = true;
     }
 
     void UpdateWeapon()
@@ -93,6 +111,7 @@ public class Gun : MonoBehaviour
         if (ammo <= 0) {
             needReload = true;
             hasAmmo = false;
+            canShoot = false;
         }
 
         ammoInfoText.text = ammo + " / " + MAX_AMMO;
