@@ -5,8 +5,8 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     public float patrolDistance = 1f;
-    public const float MOVE_SPEED = 5f;
-    public float moveSpeed = 5f;
+    public float MOVE_SPEED;
+    public float moveSpeed;
 
     [Range(1, 3)]
     public float pauseSeconds = 1f;
@@ -22,6 +22,8 @@ public class EnemyMovement : MonoBehaviour
         startPos = transform.position;
         endPos = startPos + new Vector3(patrolDistance, 0f, 0f);
         sr = GetComponent<SpriteRenderer>();
+        moveSpeed = Soldier.moveSpeed;
+        MOVE_SPEED = Soldier.moveSpeed;
     }
 
     void Update()

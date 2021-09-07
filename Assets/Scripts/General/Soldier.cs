@@ -6,6 +6,8 @@ using TMPro;
 
 public class Soldier : MonoBehaviour
 {
+    public static float moveSpeed = 5f;
+
     private const float MAX_HEALTH = 100f;
     private const float FADE_TIME = .5f;
 
@@ -16,6 +18,8 @@ public class Soldier : MonoBehaviour
     private static GameObject popUpTexts;
 
     private Slider playerHealthSlider;
+
+    bool healing = false;
 
     void Awake()
     {
@@ -31,6 +35,10 @@ public class Soldier : MonoBehaviour
 
     void Update()
     {
+        if (playerHealthSlider != null) {
+            playerHealthSlider.value = health;
+        }
+
         if (health <= 0) {
             Die();
         }
@@ -52,8 +60,14 @@ public class Soldier : MonoBehaviour
         StartCoroutine(DestroyText(floatingTextObject));
     }
 
-    public void Heal(float healAmount)
+    public IEnumerator Heal(float healAmount)
     {
+        if (!healing) {
+            yield break;
+        }
+
+        yield return new WaitForSeconds(1f);
+
         health += healAmount;
 
         // get object references
@@ -65,15 +79,19 @@ public class Soldier : MonoBehaviour
         floatingText.color = Color.green;
 
         // start countdown to destroy text
-        DestroyText(floatingTextObject);
+        StartCoroutine(DestroyText(floatingTextObject));
+
+        // start countdown to heal again
+        StartCoroutine(Heal(healAmount));
+    }
+
+    public void setHeal(bool healValue)
+    {
+        healing = healValue;
     }
 
     private IEnumerator DestroyText(GameObject textObject)
     {
-        if (playerHealthSlider != null) {
-            playerHealthSlider.value = health;
-        }
-
         yield return new WaitForSeconds(FADE_TIME);
         Destroy(textObject);
     }

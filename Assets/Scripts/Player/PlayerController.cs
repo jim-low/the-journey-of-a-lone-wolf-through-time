@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public Animator animator;
-    public float moveSpeed = 1f;
     public float jumpForce = 5f;
     public float slidingSpeed = 10f;
     public float rollDist = 7f;
@@ -14,7 +13,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 rollDestination;
     private SpriteRenderer sr;
     private Rigidbody2D rigidBody;
-    private GameObject grenadeLaunchPoint;
+    /* private GameObject grenadeLaunchPoint; */
     private Soldier soldier;
 
     bool onGround = true;
@@ -28,7 +27,7 @@ public class PlayerController : MonoBehaviour
         soldier = GetComponent<Soldier>();
         rigidBody = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
-        grenadeLaunchPoint = GameObject.Find("GrenadeLaunchPoint");
+        /* grenadeLaunchPoint = GameObject.Find("GrenadeLaunchPoint"); */
     }
 
     void Update()
@@ -80,7 +79,7 @@ public class PlayerController : MonoBehaviour
     void Move()
     {
         horizontalDir = Input.GetAxisRaw("Horizontal");
-        transform.position += new Vector3(horizontalDir, 0, 0) * moveSpeed * Time.deltaTime;
+        transform.position += new Vector3(horizontalDir, 0, 0) * Soldier.moveSpeed * Time.deltaTime;
     }
 
     void Jump()
@@ -132,7 +131,7 @@ public class PlayerController : MonoBehaviour
     void Roll()
     {
         const float rollScalar = 2f;
-        float rollSpeed = moveSpeed * rollScalar * Time.deltaTime;
+        float rollSpeed = Soldier.moveSpeed * rollScalar * Time.deltaTime;
 
         transform.position = Vector3.MoveTowards(transform.position, rollDestination, rollSpeed);
     }
@@ -142,6 +141,7 @@ public class PlayerController : MonoBehaviour
         rigidBody.AddForce(Vector2.right * slidingSpeed * horizontalDir, ForceMode2D.Impulse);
         StartCoroutine(StopSlide(1.2f));
     }
+
     void Prone()
     {
 
@@ -157,7 +157,6 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-
 
     void OnCollisionEnter2D(Collision2D collided)
     {
