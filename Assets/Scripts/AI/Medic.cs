@@ -5,11 +5,11 @@ using UnityEngine;
 public class Medic : MonoBehaviour
 {
     [SerializeField]
-    private float healAmount = 69;
+    private float healAmount = 15;
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.CompareTag("Enemy") || collider.CompareTag("Player")) {
+        if (collider.CompareTag("Enemy")) {
             collider.GetComponent<Soldier>().setHeal(true);
             StartCoroutine(collider.GetComponent<Soldier>().Heal(healAmount));
         }
@@ -17,7 +17,7 @@ public class Medic : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D collider)
     {
-        if (collider.CompareTag("Enemy") || collider.CompareTag("Player")) {
+        if (collider.CompareTag("Enemy")) {
             collider.GetComponent<Soldier>().setHeal(false);
         }
     }
