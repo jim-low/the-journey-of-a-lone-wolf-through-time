@@ -84,7 +84,17 @@ public class Gun : MonoBehaviour
 
         bulletLine.SetPosition(0, firePoint.position);
 
-        Vector2 bulletDestination = hitInfo ? (Vector2)hitInfo.point : (Vector2)(firePoint.position + firePoint.right * 100);
+        Vector2 bulletDestination;
+        if (!hitInfo) {
+            bulletDestination = (Vector2)(firePoint.position + firePoint.right * 100);
+        }
+        else if (hitInfo.collider.name.Equals("EnemyMedic")) {
+            bulletDestination = (Vector2)(hitInfo.collider.transform.position);
+        }
+        else {
+            bulletDestination = (Vector2)hitInfo.point;
+        }
+
         bulletLine.SetPosition(1, bulletDestination);
         int randomDigits = Random.Range(-1, 1);
         bulletLine.SetPosition(1, new Vector2(bulletDestination.x , bulletDestination.y + randomDigits));
