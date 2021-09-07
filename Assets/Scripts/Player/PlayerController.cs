@@ -81,7 +81,6 @@ public class PlayerController : MonoBehaviour
     {
         horizontalDir = Input.GetAxisRaw("Horizontal");
         transform.position += new Vector3(horizontalDir, 0, 0) * moveSpeed * Time.deltaTime;
-
     }
 
     void Jump()
