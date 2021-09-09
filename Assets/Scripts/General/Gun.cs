@@ -79,21 +79,25 @@ public class Gun : MonoBehaviour
             yield break;
         }
 
-        RaycastHit2D hitInfo = Physics2D.Raycast(firePoint.position, firePoint.right);
+        RaycastHit2D[] hitInfo = Physics2D.RaycastAll(firePoint.position, firePoint.right);
 
         bulletLine.SetPosition(0, firePoint.position);
 
-        Vector2 bulletDestination;
+        Vector2 bulletDestination = (Vector2)(firePoint.position + firePoint.right * 100);
 
-        if (!hitInfo) {
-            bulletDestination = (Vector2)(firePoint.position + firePoint.right * 100);
-        }
-        else if (hitInfo.collider.name.Equals("EnemyMedic") || hitInfo.collider.CompareTag("Enemy")) {
-            bulletDestination = (Vector2)(hitInfo.collider.transform.position);
-            hitInfo.collider.gameObject.GetComponent<Soldier>().Damage(damage);
-        }
-        else {
-            bulletDestination = (Vector2)hitInfo.point;
+        foreach (RaycastHit2D hitObject in hitInfo) {
+            if (hitObject.collider.name.Equals("Obstacle")) {
+                bulletDestination = hitObject.point;
+                break;
+            }
+            else if (hitObject.collider.name.Equals("EnemyMedic") || hitObject.collider.CompareTag("Enemy")) {
+                bulletDestination = hitObject.point;
+                hitObject.collider.gameObject.GetComponent<Soldier>().Damage(damage);
+                break;
+            }
+            else {
+                bulletDestination = (Vector2)hitObject.point;
+            }
         }
 
         bulletLine.SetPosition(1, bulletDestination);
