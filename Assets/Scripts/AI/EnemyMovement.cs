@@ -37,15 +37,14 @@ public class EnemyMovement : MonoBehaviour
     {
         transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
 
-        if (transform.position.x < startPos.x || transform.position.x > endPos.x) {
+        if (transform.position.x <= startPos.x || transform.position.x >= endPos.x) {
+            pausing = true;
             StartCoroutine(ChangeDirection());
         }
     }
 
     IEnumerator ChangeDirection()
     {
-        pausing = true;
-        moveSpeed = 0;
         yield return new WaitForSeconds(pauseSeconds);
         sr.flipX = !sr.flipX;
         moveSpeed = sr.flipX ? -MOVE_SPEED : MOVE_SPEED;

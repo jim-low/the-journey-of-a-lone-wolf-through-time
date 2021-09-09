@@ -4,15 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    private Soldier enemySoldier;
-
-    void Start()
-    {
-
-    }
-
-    void Update()
-    {
-
-    }
+    public Soldier enemySoldier;
+    public bool hasDetectedPlayer = false;
 }
+

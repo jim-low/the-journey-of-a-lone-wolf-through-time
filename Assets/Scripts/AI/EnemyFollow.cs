@@ -38,7 +38,6 @@ public class EnemyFollow : MonoBehaviour
     void DeterminePlayerDistance()
     {
         float distance = Vector3.Distance(transform.position, playerPos);
-        Debug.Log(distance);
 
         if (distance < followRange) {
             following = true;
