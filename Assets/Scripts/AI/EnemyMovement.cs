@@ -46,8 +46,11 @@ public class EnemyMovement : MonoBehaviour
     IEnumerator ChangeDirection()
     {
         yield return new WaitForSeconds(pauseSeconds);
-        sr.flipX = !sr.flipX;
-        moveSpeed = sr.flipX ? -MOVE_SPEED : MOVE_SPEED;
+        Vector3 currentScale = transform.localScale;
+        currentScale.x *= -1;
+        transform.localScale = currentScale;
+        //sr.flipX = !sr.flipX;
+        moveSpeed = currentScale.x < 0 ? -MOVE_SPEED : MOVE_SPEED;
         pausing = false;
     }
 }

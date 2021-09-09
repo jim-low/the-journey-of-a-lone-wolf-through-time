@@ -6,7 +6,11 @@ using TMPro;
 
 public class Soldier : MonoBehaviour
 {
+
     public static float moveSpeed = 5f;
+
+
+    //public Animator animator;
 
     private const float MAX_HEALTH = 100f;
     private const float FADE_TIME = .5f;
@@ -41,6 +45,7 @@ public class Soldier : MonoBehaviour
         }
 
         if (health <= 0) {
+           // animator.SetBool("isDeath", true);
             Die();
         }
     }

@@ -7,12 +7,14 @@ public class EnemyFollow : MonoBehaviour
     public float followRange = 20f;
 
     private EnemyMovement enemyMovement;
+    private Enemy enemy;
     private Vector3 playerPos;
 
     bool following = false;
 
     void Start()
     {
+        enemy = GetComponent<Enemy>();
         enemyMovement = GetComponent<EnemyMovement>();
         playerPos = GameObject.Find("Player").transform.position;
     }
@@ -24,15 +26,19 @@ public class EnemyFollow : MonoBehaviour
         }
 
         playerPos = GameObject.Find("Player").transform.position;
-
+        Vector3 scale = transform.localScale;
         if (following && Mathf.Abs(transform.position.x - playerPos.x) >= followRange) {
             if (transform.position.x < playerPos.x) {
                 transform.Translate(new Vector3(Soldier.moveSpeed, 0, 0) * Time.deltaTime);
+                scale.x = Mathf.Abs(scale.x);
             }
             else {
                 transform.Translate(new Vector3(-Soldier.moveSpeed, 0, 0) * Time.deltaTime);
+                scale.x = -Mathf.Abs(scale.x);
             }
+
         }
+        transform.localScale = scale;
     }
 
     void DeterminePlayerDistance()
@@ -42,6 +48,10 @@ public class EnemyFollow : MonoBehaviour
         if (distance < followRange) {
             following = true;
             enemyMovement.enabled = false;
+            if (enemy.type.Equals("Knife"))
+            {
+                followRange = 2f;
+            }
         }
     }
 }
