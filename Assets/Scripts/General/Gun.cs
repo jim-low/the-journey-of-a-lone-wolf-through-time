@@ -16,9 +16,10 @@ public class Gun : MonoBehaviour
     public float damage = 15f;
     public float reloadTime = 1.25f;
     public float firingRate = 0.2f;
+    public LineRenderer bulletLine;
+
     public static TextMeshProUGUI reloadText;
     public static TextMeshProUGUI ammoInfoText;
-    public static LineRenderer bulletLine;
 
     bool hasAmmo = true;
     bool needReload = false;
@@ -40,13 +41,11 @@ public class Gun : MonoBehaviour
     {
         Aim();
 
-        UpdateWeapon();
-
         if (canShoot && hasAmmo && Input.GetMouseButton(0)) {
             StartCoroutine(Shoot());
         }
 
-        if (needReload || Input.GetKeyDown(KeyCode.R)) {
+        if (Input.GetKeyDown(KeyCode.R)) {
             StartCoroutine(Reload());
         }
     }
@@ -77,7 +76,7 @@ public class Gun : MonoBehaviour
     IEnumerator Shoot()
     {
         if (!canShoot) {
-            yield return null;
+            yield break;
         }
 
         RaycastHit2D hitInfo = Physics2D.Raycast(firePoint.position, firePoint.right);
@@ -85,11 +84,13 @@ public class Gun : MonoBehaviour
         bulletLine.SetPosition(0, firePoint.position);
 
         Vector2 bulletDestination;
+
         if (!hitInfo) {
             bulletDestination = (Vector2)(firePoint.position + firePoint.right * 100);
         }
-        else if (hitInfo.collider.name.Equals("EnemyMedic")) {
+        else if (hitInfo.collider.name.Equals("EnemyMedic") || hitInfo.collider.CompareTag("Enemy")) {
             bulletDestination = (Vector2)(hitInfo.collider.transform.position);
+            hitInfo.collider.gameObject.GetComponent<Soldier>().Damage(damage);
         }
         else {
             bulletDestination = (Vector2)hitInfo.point;

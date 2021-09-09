@@ -52,7 +52,6 @@ public class PlayerController : MonoBehaviour
         }
 
         if (!rolling && onGround && Input.GetKeyDown(KeyCode.LeftShift)) {
-
             rolling = true;
 
             rollDestination = transform.position;

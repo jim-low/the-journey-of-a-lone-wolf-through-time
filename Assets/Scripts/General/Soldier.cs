@@ -11,8 +11,7 @@ public class Soldier : MonoBehaviour
     private const float MAX_HEALTH = 100f;
     private const float FADE_TIME = .5f;
 
-    [SerializeField]
-    private float health = MAX_HEALTH;
+    public float health = MAX_HEALTH;
 
     private static GameObject floatingTextPrefab;
     private static GameObject popUpTexts;
@@ -29,8 +28,10 @@ public class Soldier : MonoBehaviour
 
     void Start()
     {
-        playerHealthSlider = GameObject.Find("PlayerHealth").GetComponent<Slider>();
-        playerHealthSlider.maxValue = playerHealthSlider.value = MAX_HEALTH;
+        if (CompareTag("Player")) {
+            playerHealthSlider = GameObject.Find("PlayerHealth").GetComponent<Slider>();
+            playerHealthSlider.maxValue = playerHealthSlider.value = MAX_HEALTH;
+        }
     }
 
     void Update()
@@ -46,7 +47,7 @@ public class Soldier : MonoBehaviour
 
     public void Damage(float damage)
     {
-        health -= damage;
+        this.health -= damage;
 
         // get object references
         GameObject floatingTextObject = Instantiate(floatingTextPrefab, transform.position, Quaternion.identity, popUpTexts.transform);
@@ -68,7 +69,12 @@ public class Soldier : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
 
-        health += healAmount;
+        if (this.health >= 100) {
+            StartCoroutine(Heal(healAmount));
+            yield break;
+        }
+
+        this.health += healAmount;
 
         // get object references
         GameObject floatingTextObject = Instantiate(floatingTextPrefab, transform.position, Quaternion.identity, popUpTexts.transform);
@@ -98,7 +104,7 @@ public class Soldier : MonoBehaviour
 
     private void Die()
     {
-        Debug.Log("lmao, yuo is die");
         // play die animation here
+        /* Destroy(gameObject); */
     }
 }
