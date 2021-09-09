@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     bool onGround = true;
     bool rolling = false;
     bool prone = true;
+    bool crouch = true;
     float horizontalDir;
     float grenadeThrowForce = 15f;
 
@@ -50,7 +51,7 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("isSlide", true);
             Slide();
         }
-
+        /*
         if (!rolling && onGround && Input.GetKeyDown(KeyCode.LeftShift)) {
             rolling = true;
 
@@ -58,7 +59,7 @@ public class PlayerController : MonoBehaviour
             rollDist = sr.flipX ? -Mathf.Abs(rollDist) : Mathf.Abs(rollDist);
             rollDestination.x += (rollDist);
             StartCoroutine(StopRoll(0.5f));
-        }
+        }*/
 
         if (rolling) {
             animator.SetBool("isRolling", true);
@@ -68,6 +69,11 @@ public class PlayerController : MonoBehaviour
         if(onGround && Input.GetKeyDown(KeyCode.C))
         {
             Prone();
+        }
+
+        if (onGround && (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.LeftControl)))
+        {
+            Crouch();
         }
     }
 
@@ -88,7 +94,9 @@ public class PlayerController : MonoBehaviour
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3 mouseDirection = (mousePos - transform.position).normalized;
         float angle = Mathf.Atan2(mouseDirection.y, mouseDirection.x) * Mathf.Rad2Deg;
-        sr.flipX = Mathf.Abs(angle) > 90;
+        Vector3 currentScale = transform.localScale;
+        currentScale.x = Mathf.Abs(angle) > 90 ? -Mathf.Abs(currentScale.x) : Mathf.Abs(currentScale.x);
+        transform.localScale = currentScale;
     }
 
     IEnumerator StopRoll(float stopTime) {
@@ -131,6 +139,23 @@ public class PlayerController : MonoBehaviour
         }
 
     }
+    void Crouch()
+    {
+
+        if (crouch)
+        {
+            animator.SetBool("isCrouch", true);
+            crouch = false;
+        }
+        else
+        {
+            animator.SetBool("isCrouch", false);
+            crouch = true;
+        }
+
+    }
+
+
 
     void OnCollisionEnter2D(Collision2D collided)
     {

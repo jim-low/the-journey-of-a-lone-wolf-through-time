@@ -6,5 +6,6 @@ public class Enemy : MonoBehaviour
 {
     public Soldier enemySoldier;
     public bool hasDetectedPlayer = false;
+    public string type = "Shooter";
 }
 
