@@ -43,11 +43,6 @@ public class Soldier : MonoBehaviour
         if (playerHealthSlider != null) {
             playerHealthSlider.value = health;
         }
-
-        if (health <= 0) {
-           // animator.SetBool("isDeath", true);
-            Die();
-        }
     }
 
     public void Damage(float damage)
@@ -61,6 +56,10 @@ public class Soldier : MonoBehaviour
         // set text and color
         floatingText.text = "-" + damage;
         floatingText.color = Color.red;
+
+        if (this.health <= 0) {
+            Die();
+        }
 
         // start countdown to destroy text
         StartCoroutine(DestroyText(floatingTextObject));
@@ -109,6 +108,7 @@ public class Soldier : MonoBehaviour
 
     private void Die()
     {
+        Destroy(this);
         // play die animation here
         /* Destroy(gameObject); */
     }
