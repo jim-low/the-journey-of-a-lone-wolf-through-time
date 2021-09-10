@@ -5,21 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class NextScene : MonoBehaviour
 {
-    public string nextLevel;
-    public Animator animator;
+    /* public Animator animator; */
 
-    IEnumerator Wait()
+    IEnumerator GoNextLevel()
     {
-        yield return new WaitForSeconds(2); // wait for 2 seconds
-        SceneManager.LoadScene(nextLevel);
+        yield return new WaitForSeconds(1f);
+        /* SceneManager.LoadScene(); */
+        Debug.Log("Curent active scene = " + SceneManager.GetActiveScene().name);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            animator.SetBool("isOpen", true);
-            StartCoroutine(Wait());
+            /* animator.SetBool("isOpen", true); */
+            StartCoroutine(GoNextLevel());
         }
     }
 }
