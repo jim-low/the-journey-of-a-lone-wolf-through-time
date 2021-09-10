@@ -4,22 +4,12 @@ using UnityEngine;
 
 public class LevelWin : MonoBehaviour
 {
-    private int enemyCount;
-    // Start is called before the first frame update
-    void Start()
+    public void CheckWin()
     {
-        enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
-    }
+        int enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
 
-    // Update is called once per frame
-    void Update()
-    {
-        enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
-
-        if(enemyCount == 0)
-        {
+        if (enemyCount == 0) {
             Debug.Log("the door is available now!");
         }
     }
-
 }

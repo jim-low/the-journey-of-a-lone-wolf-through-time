@@ -18,9 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Airship.unity
     guid: 69592172742c47a47960c1ddd8f78ceb
   - enabled: 1
-    path: Assets/Scenes/Victory.unity
+    path: Assets/Scenes/WInScreen.unity
     guid: 547cda467ad728dc6b74f4e7ab5cdeaf
   - enabled: 1
-    path: Assets/Scenes/GameOver.unity
+    path: Assets/Scenes/LoseScreen.unity
     guid: bd3d15d8850fa6483b58c4b7ccd507a2
   m_configObjects: {}
