@@ -34,7 +34,7 @@ Transform:
   m_GameObject: {fileID: 8240842094453282231}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 22.57, y: 1.25, z: 0}
-  m_LocalScale: {x: 0.62029, y: 0.62029, z: 0.62029}
+  m_LocalScale: {x: 0.6595535, y: 0.6595535, z: 0.6595535}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 2269992260431915163, guid: 9d8791f521285fb438079356717c895e, type: 3}
-  m_Color: {r: 0.9339623, g: 0.36392617, b: 0.17181383, a: 1}
+  m_Color: {r: 0.9339623, g: 0.46309796, b: 0.3039783, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -170,6 +170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemySoldier: {fileID: 0}
   hasDetectedPlayer: 0
+  type: Shooter
 --- !u!114 &8240842094453282224
 MonoBehaviour:
   m_ObjectHideFlags: 0

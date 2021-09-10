@@ -40,12 +40,13 @@ public class Gun : MonoBehaviour
     void Update()
     {
         Aim();
+        UpdateWeapon();
 
         if (canShoot && hasAmmo && Input.GetMouseButton(0)) {
             StartCoroutine(Shoot());
         }
 
-        if (Input.GetKeyDown(KeyCode.R)) {
+        if (needReload || Input.GetKeyDown(KeyCode.R)) {
             StartCoroutine(Reload());
         }
     }
@@ -69,7 +70,13 @@ public class Gun : MonoBehaviour
         Vector3 aimDirection = (mousePos - transform.position).normalized;
         float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
 
+        weaponSprite.flipX = Mathf.Abs(angle) > 90;
         weaponSprite.flipY = Mathf.Abs(angle) > 90;
+
+        Vector3 scale = weaponSprite.transform.localScale;
+        scale.x = Mathf.Abs(angle) > 90 ? -Mathf.Abs(scale.x) : Mathf.Abs(scale.x);
+        weaponSprite.transform.localScale = scale;
+
         weaponPosition.eulerAngles = new Vector3(0, 0, angle);
     }
 

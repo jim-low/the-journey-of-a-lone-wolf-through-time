@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4039527258408786561, guid: 0bf8c2c603e504c47a9cdfddd35b9587, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9056604, g: 0.32039872, b: 0.32039872, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -156,10 +156,10 @@ GameObject:
   - component: {fileID: 7338272580747281842}
   - component: {fileID: 7338272580747281843}
   - component: {fileID: 7338272580747281854}
+  - component: {fileID: 418395921}
   - component: {fileID: 418395918}
   - component: {fileID: 418395919}
   - component: {fileID: 418395920}
-  - component: {fileID: 418395921}
   m_Layer: 0
   m_Name: EnemyMelee
   m_TagString: Enemy
@@ -224,7 +224,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 5
   m_Sprite: {fileID: 4035959289877228764, guid: 3d0217fe21c383c478a059ea6504e9e4, type: 3}
-  m_Color: {r: 0.9245283, g: 0.60530436, b: 0.60530436, a: 1}
+  m_Color: {r: 0.9245283, g: 0.3270737, b: 0.3270737, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -306,6 +306,18 @@ MonoBehaviour:
   MOVE_SPEED: 5
   moveSpeed: 5
   pauseSeconds: 1
+--- !u!114 &418395921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7338272580747281844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20cbbd1b6fe321d45a41e82185c5c459, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &418395918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -347,15 +359,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   followRange: 20
---- !u!114 &418395921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7338272580747281844}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20cbbd1b6fe321d45a41e82185c5c459, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

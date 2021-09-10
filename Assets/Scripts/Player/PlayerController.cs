@@ -13,7 +13,6 @@ public class PlayerController : MonoBehaviour
     private Vector3 rollDestination;
     private SpriteRenderer sr;
     private Rigidbody2D rigidBody;
-    /* private GameObject grenadeLaunchPoint; */
     private Soldier soldier;
 
     bool onGround = true;
@@ -28,7 +27,6 @@ public class PlayerController : MonoBehaviour
         soldier = GetComponent<Soldier>();
         rigidBody = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
-        /* grenadeLaunchPoint = GameObject.Find("GrenadeLaunchPoint"); */
     }
 
     void Update()
@@ -51,15 +49,6 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("isSlide", true);
             Slide();
         }
-        /*
-        if (!rolling && onGround && Input.GetKeyDown(KeyCode.LeftShift)) {
-            rolling = true;
-
-            rollDestination = transform.position;
-            rollDist = sr.flipX ? -Mathf.Abs(rollDist) : Mathf.Abs(rollDist);
-            rollDestination.x += (rollDist);
-            StartCoroutine(StopRoll(0.5f));
-        }*/
 
         if (rolling) {
             animator.SetBool("isRolling", true);
@@ -71,7 +60,7 @@ public class PlayerController : MonoBehaviour
             Prone();
         }
 
-        if (onGround && (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.LeftControl)))
+        if (onGround && horizontalDir == 0 && (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.LeftControl)))
         {
             Crouch();
         }
@@ -94,9 +83,8 @@ public class PlayerController : MonoBehaviour
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3 mouseDirection = (mousePos - transform.position).normalized;
         float angle = Mathf.Atan2(mouseDirection.y, mouseDirection.x) * Mathf.Rad2Deg;
-        Vector3 currentScale = transform.localScale;
-        currentScale.x = Mathf.Abs(angle) > 90 ? -Mathf.Abs(currentScale.x) : Mathf.Abs(currentScale.x);
-        transform.localScale = currentScale;
+
+        sr.flipX = Mathf.Abs(angle) > 90;
     }
 
     IEnumerator StopRoll(float stopTime) {
@@ -139,6 +127,7 @@ public class PlayerController : MonoBehaviour
         }
 
     }
+
     void Crouch()
     {
 
@@ -154,8 +143,6 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-
-
 
     void OnCollisionEnter2D(Collision2D collided)
     {

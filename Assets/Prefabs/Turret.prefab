@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 1937565226}
   - component: {fileID: 1937565227}
   m_Layer: 0
-  m_Name: DetectionRange
+  m_Name: AttackRange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -109,11 +109,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2770853251826047816}
-  - component: {fileID: 424983367299983284}
   - component: {fileID: 424983367299983283}
-  - component: {fileID: 424983367299983285}
-  - component: {fileID: 424983367299983286}
-  - component: {fileID: 424983367299983287}
+  - component: {fileID: 424983367299983284}
+  - component: {fileID: 5050921169311968040}
+  - component: {fileID: 178674349848329671}
+  - component: {fileID: 7233629559188449805}
   m_Layer: 0
   m_Name: Turret
   m_TagString: Enemy
@@ -139,27 +139,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &424983367299983284
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5057735431282017025}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 5
 --- !u!61 &424983367299983283
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -186,7 +165,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.0894814, y: 3.107794}
   m_EdgeRadius: 0
---- !u!114 &424983367299983285
+--- !u!50 &424983367299983284
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5057735431282017025}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 5
+--- !u!114 &5050921169311968040
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -203,7 +203,7 @@ MonoBehaviour:
   bulletLinePrefab: {fileID: 0}
   recoilTime: 0.125
   ammo: 30
---- !u!114 &424983367299983286
+--- !u!114 &178674349848329671
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -216,7 +216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
---- !u!114 &424983367299983287
+--- !u!114 &7233629559188449805
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -230,6 +230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemySoldier: {fileID: 0}
   hasDetectedPlayer: 0
+  type: Shooter
 --- !u!1 &5314622209406457614
 GameObject:
   m_ObjectHideFlags: 0
