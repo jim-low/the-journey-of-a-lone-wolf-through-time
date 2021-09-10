@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public Animator animator;
-    public float moveSpeed = 1f;
     public float jumpForce = 5f;
     public float slidingSpeed = 10f;
     public float rollDist = 7f;
@@ -14,12 +13,12 @@ public class PlayerController : MonoBehaviour
     private Vector3 rollDestination;
     private SpriteRenderer sr;
     private Rigidbody2D rigidBody;
-    private GameObject grenadeLaunchPoint;
     private Soldier soldier;
 
     bool onGround = true;
     bool rolling = false;
     bool prone = true;
+    bool crouch = true;
     float horizontalDir;
     float grenadeThrowForce = 15f;
 
@@ -28,7 +27,6 @@ public class PlayerController : MonoBehaviour
         soldier = GetComponent<Soldier>();
         rigidBody = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
-        grenadeLaunchPoint = GameObject.Find("GrenadeLaunchPoint");
     }
 
     void Update()
@@ -53,34 +51,31 @@ public class PlayerController : MonoBehaviour
         }
 
         if (!rolling && onGround && Input.GetKeyDown(KeyCode.LeftShift)) {
-
             rolling = true;
-
             rollDestination = transform.position;
             rollDist = sr.flipX ? -Mathf.Abs(rollDist) : Mathf.Abs(rollDist);
-            rollDestination.x += (rollDist);
+            rollDestination.x += rollDist;
             StartCoroutine(StopRoll(0.5f));
         }
-
-        /* if (Input.GetKeyDown(KeyCode.G)) { */
-        /*     ThrowGrenade(); */
-        /* } */
 
         if (rolling) {
             animator.SetBool("isRolling", true);
             Roll();
         }
 
-        if(onGround && Input.GetKeyDown(KeyCode.C))
-        {
+        if (onGround && Input.GetKeyDown(KeyCode.C)) {
             Prone();
+        }
+
+        if (onGround && horizontalDir == 0 && (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.LeftControl))) {
+            Crouch();
         }
     }
 
     void Move()
     {
         horizontalDir = Input.GetAxisRaw("Horizontal");
-        transform.position += new Vector3(horizontalDir, 0, 0) * moveSpeed * Time.deltaTime;
+        transform.position += new Vector3(horizontalDir, 0, 0) * Soldier.moveSpeed * Time.deltaTime;
     }
 
     void Jump()
@@ -94,34 +89,15 @@ public class PlayerController : MonoBehaviour
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3 mouseDirection = (mousePos - transform.position).normalized;
         float angle = Mathf.Atan2(mouseDirection.y, mouseDirection.x) * Mathf.Rad2Deg;
+
         sr.flipX = Mathf.Abs(angle) > 90;
     }
-
-    /* void ThrowGrenade() */
-    /* { */
-    /*     // calculate throw angle */
-    /*     Vector3 grenadeLaunchPos = Camera.main.ScreenToWorldPoint(grenadeLaunchPoint.transform.position); */
-    /*     Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition); */
-    /*     float grenadeThrowAngle = Mathf.Atan2(mousePos.y - grenadeLaunchPos.y, mousePos.x - grenadeLaunchPos.x) * Mathf.Rad2Deg; */
-    /*     Debug.Log(grenadeThrowAngle); */
-
-    /*     // set grenade start position */
-    /*     GameObject grenade = Instantiate(grenadePrefab); */
-    /*     grenade.transform.position = gameObject.transform.position; */
-
-    /*     // set grenade velocity */
-    /*     Vector2 grenadeVelocity = Vector2.one * grenadeThrowForce; */
-    /*     // TODO: correctly calculate throw angle */
-    /*     grenadeVelocity.x += Mathf.Cos(grenadeThrowAngle); */
-    /*     grenadeVelocity.y += Mathf.Sin(grenadeThrowAngle); */
-    /*     grenade.GetComponent<Rigidbody2D>().velocity = grenadeVelocity; */
-    /*     Debug.Log(grenadeVelocity); */
-    /* } */
 
     IEnumerator StopRoll(float stopTime) {
         yield return new WaitForSeconds(stopTime);
         rolling = false;
     }
+
     IEnumerator StopSlide(float stopTime)
     {
         yield return new WaitForSeconds(stopTime);
@@ -132,7 +108,7 @@ public class PlayerController : MonoBehaviour
     void Roll()
     {
         const float rollScalar = 2f;
-        float rollSpeed = moveSpeed * rollScalar * Time.deltaTime;
+        float rollSpeed = Soldier.moveSpeed * rollScalar * Time.deltaTime;
 
         transform.position = Vector3.MoveTowards(transform.position, rollDestination, rollSpeed);
     }
@@ -142,6 +118,7 @@ public class PlayerController : MonoBehaviour
         rigidBody.AddForce(Vector2.right * slidingSpeed * horizontalDir, ForceMode2D.Impulse);
         StartCoroutine(StopSlide(1.2f));
     }
+
     void Prone()
     {
 
@@ -158,6 +135,21 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    void Crouch()
+    {
+
+        if (crouch)
+        {
+            animator.SetBool("isCrouch", true);
+            crouch = false;
+        }
+        else
+        {
+            animator.SetBool("isCrouch", false);
+            crouch = true;
+        }
+
+    }
 
     void OnCollisionEnter2D(Collision2D collided)
     {

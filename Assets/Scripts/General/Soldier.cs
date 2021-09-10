@@ -6,16 +6,23 @@ using TMPro;
 
 public class Soldier : MonoBehaviour
 {
+
+    public static float moveSpeed = 5f;
+
+
+    //public Animator animator;
+
     private const float MAX_HEALTH = 100f;
     private const float FADE_TIME = .5f;
 
-    [SerializeField]
-    private float health = MAX_HEALTH;
+    public float health = MAX_HEALTH;
 
     private static GameObject floatingTextPrefab;
     private static GameObject popUpTexts;
 
     private Slider playerHealthSlider;
+
+    bool healing = false;
 
     void Awake()
     {
@@ -25,20 +32,27 @@ public class Soldier : MonoBehaviour
 
     void Start()
     {
-        playerHealthSlider = GameObject.Find("PlayerHealth").GetComponent<Slider>();
-        playerHealthSlider.maxValue = playerHealthSlider.value = MAX_HEALTH;
+        if (CompareTag("Player")) {
+            playerHealthSlider = GameObject.Find("PlayerHealth").GetComponent<Slider>();
+            playerHealthSlider.maxValue = playerHealthSlider.value = MAX_HEALTH;
+        }
     }
 
     void Update()
     {
+        if (playerHealthSlider != null) {
+            playerHealthSlider.value = health;
+        }
+
         if (health <= 0) {
+           // animator.SetBool("isDeath", true);
             Die();
         }
     }
 
     public void Damage(float damage)
     {
-        health -= damage;
+        this.health -= damage;
 
         // get object references
         GameObject floatingTextObject = Instantiate(floatingTextPrefab, transform.position, Quaternion.identity, popUpTexts.transform);
@@ -52,9 +66,20 @@ public class Soldier : MonoBehaviour
         StartCoroutine(DestroyText(floatingTextObject));
     }
 
-    public void Heal(float healAmount)
+    public IEnumerator Heal(float healAmount)
     {
-        health += healAmount;
+        if (!healing) {
+            yield break;
+        }
+
+        yield return new WaitForSeconds(1f);
+
+        if (this.health >= 100) {
+            StartCoroutine(Heal(healAmount));
+            yield break;
+        }
+
+        this.health += healAmount;
 
         // get object references
         GameObject floatingTextObject = Instantiate(floatingTextPrefab, transform.position, Quaternion.identity, popUpTexts.transform);
@@ -65,22 +90,26 @@ public class Soldier : MonoBehaviour
         floatingText.color = Color.green;
 
         // start countdown to destroy text
-        DestroyText(floatingTextObject);
+        StartCoroutine(DestroyText(floatingTextObject));
+
+        // start countdown to heal again
+        StartCoroutine(Heal(healAmount));
+    }
+
+    public void setHeal(bool healValue)
+    {
+        healing = healValue;
     }
 
     private IEnumerator DestroyText(GameObject textObject)
     {
-        if (playerHealthSlider != null) {
-            playerHealthSlider.value = health;
-        }
-
         yield return new WaitForSeconds(FADE_TIME);
         Destroy(textObject);
     }
 
     private void Die()
     {
-        Debug.Log("lmao, yuo is die");
         // play die animation here
+        /* Destroy(gameObject); */
     }
 }

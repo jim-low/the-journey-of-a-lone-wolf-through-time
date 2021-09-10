@@ -5,8 +5,9 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     public float patrolDistance = 1f;
-    public const float MOVE_SPEED = 5f;
-    public float moveSpeed = 5f;
+    public float MOVE_SPEED;
+    public float moveSpeed;
+    public Animator animator;
 
     [Range(1, 3)]
     public float pauseSeconds = 1f;
@@ -15,6 +16,7 @@ public class EnemyMovement : MonoBehaviour
     private Vector3 endPos;
     private SpriteRenderer sr;
 
+
     bool pausing = false;
 
     void Start()
@@ -22,6 +24,8 @@ public class EnemyMovement : MonoBehaviour
         startPos = transform.position;
         endPos = startPos + new Vector3(patrolDistance, 0f, 0f);
         sr = GetComponent<SpriteRenderer>();
+        moveSpeed = Soldier.moveSpeed;
+        MOVE_SPEED = Soldier.moveSpeed;
     }
 
     void Update()
@@ -33,20 +37,24 @@ public class EnemyMovement : MonoBehaviour
 
     void Move()
     {
+        animator.SetBool("isMoving", true);
         transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
+        if (transform.position.x <= startPos.x || transform.position.x >= endPos.x) {
+            pausing = true;
 
-        if (transform.position.x < startPos.x || transform.position.x > endPos.x) {
             StartCoroutine(ChangeDirection());
         }
     }
 
     IEnumerator ChangeDirection()
     {
-        pausing = true;
-        moveSpeed = 0;
         yield return new WaitForSeconds(pauseSeconds);
-        sr.flipX = !sr.flipX;
-        moveSpeed = sr.flipX ? -MOVE_SPEED : MOVE_SPEED;
+        animator.SetBool("isMoving", false);
+        Vector3 currentScale = transform.localScale;
+        currentScale.x *= -1;
+        transform.localScale = currentScale;
+        //sr.flipX = !sr.flipX;
+        moveSpeed = currentScale.x < 0 ? -MOVE_SPEED : MOVE_SPEED;
         pausing = false;
     }
 }
