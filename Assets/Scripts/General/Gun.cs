@@ -9,8 +9,8 @@ public class Gun : MonoBehaviour
     private Transform weaponPosition;
     private SpriteRenderer weaponSprite;
 
-    [SerializeField]
-    private int MAX_AMMO = 30;
+    [SerializeField] private AudioSource gunSound;
+    [SerializeField] private int MAX_AMMO = 30;
 
     public int ammo;
     public float damage = 15f;
@@ -43,6 +43,7 @@ public class Gun : MonoBehaviour
         UpdateWeapon();
 
         if (canShoot && hasAmmo && Input.GetMouseButton(0)) {
+            gunSound.Play();
             StartCoroutine(Shoot());
         }
 

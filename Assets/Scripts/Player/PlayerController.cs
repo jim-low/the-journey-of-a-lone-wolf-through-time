@@ -9,11 +9,14 @@ public class PlayerController : MonoBehaviour
     public float slidingSpeed = 10f;
     public float rollDist = 7f;
     public GameObject grenadePrefab;
+    [SerializeField] private AudioSource roll;
+    [SerializeField] private AudioSource slide;
 
     private Vector3 rollDestination;
     private SpriteRenderer sr;
     private Rigidbody2D rigidBody;
     private Soldier soldier;
+
 
     bool onGround = true;
     bool rolling = false;
@@ -47,6 +50,8 @@ public class PlayerController : MonoBehaviour
 
         if (horizontalDir != 0 && Input.GetKeyDown(KeyCode.LeftControl)) {
             animator.SetBool("isSlide", true);
+            slide.Play();
+            //SoundManagerScript.PlaySound("Slide");
             Slide();
         }
 
@@ -60,6 +65,8 @@ public class PlayerController : MonoBehaviour
 
         if (rolling) {
             animator.SetBool("isRolling", true);
+            //SoundManagerScript.PlaySound("Roll");
+            roll.Play();
             Roll();
         }
 
@@ -75,6 +82,7 @@ public class PlayerController : MonoBehaviour
     void Move()
     {
         horizontalDir = Input.GetAxisRaw("Horizontal");
+        
         transform.position += new Vector3(horizontalDir, 0, 0) * Soldier.moveSpeed * Time.deltaTime;
     }
 
