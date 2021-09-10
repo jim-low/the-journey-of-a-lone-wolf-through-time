@@ -8,6 +8,7 @@ public class Gun : MonoBehaviour
     private Transform firePoint;
     private Transform weaponPosition;
     private SpriteRenderer weaponSprite;
+    private LineRenderer bulletLine;
 
     [SerializeField] private AudioSource gunSound;
     [SerializeField] private int MAX_AMMO = 30;
@@ -16,7 +17,6 @@ public class Gun : MonoBehaviour
     public float damage = 15f;
     public float reloadTime = 1.25f;
     public float firingRate = 0.2f;
-    public LineRenderer bulletLine;
 
     public static TextMeshProUGUI reloadText;
     public static TextMeshProUGUI ammoInfoText;
@@ -31,6 +31,7 @@ public class Gun : MonoBehaviour
         weaponPosition = GetComponent<Transform>();
         weaponSprite = GetComponentInChildren<SpriteRenderer>();
         firePoint = GameObject.Find(gameObject.name + "FirePoint").transform;
+        bulletLine = GameObject.Find("BulletLine").GetComponent<LineRenderer>();
 
         reloadText = GameObject.Find("ReloadText").GetComponent<TextMeshProUGUI>();
         ammoInfoText = GameObject.Find("AmmoText").GetComponent<TextMeshProUGUI>();
@@ -43,7 +44,6 @@ public class Gun : MonoBehaviour
         UpdateWeapon();
 
         if (canShoot && hasAmmo && Input.GetMouseButton(0)) {
-            gunSound.Play();
             StartCoroutine(Shoot());
         }
 
@@ -89,10 +89,10 @@ public class Gun : MonoBehaviour
 
         RaycastHit2D[] hitInfo = Physics2D.RaycastAll(firePoint.position, firePoint.right);
 
-        bulletLine.SetPosition(0, firePoint.position);
+        LineRenderer bulletLinePrefab = Instantiate(bulletLine);
+        bulletLinePrefab.SetPosition(0, firePoint.position);
 
         Vector2 bulletDestination = (Vector2)(firePoint.position + firePoint.right * 100);
-
         foreach (RaycastHit2D hitObject in hitInfo) {
             if (hitObject.collider.name.Equals("Obstacle")) {
                 bulletDestination = hitObject.point;
@@ -108,16 +108,11 @@ public class Gun : MonoBehaviour
             }
         }
 
-        bulletLine.SetPosition(1, bulletDestination);
-        int randomDigits = Random.Range(-1, 1);
-        bulletLine.SetPosition(1, new Vector2(bulletDestination.x , bulletDestination.y + randomDigits));
+        bulletLinePrefab.SetPosition(1, bulletDestination);
+        gunSound.Play();
 
-        canShoot = false;
 
-        bulletLine.enabled = true;
-        yield return new WaitForSeconds(0.02f);
-        bulletLine.enabled = false;
-
+        Destroy(bulletLinePrefab.gameObject);
         --ammo;
 
         StartCoroutine(Recoil());
@@ -125,6 +120,7 @@ public class Gun : MonoBehaviour
 
     IEnumerator Recoil()
     {
+        canShoot = false;
         yield return new WaitForSeconds(firingRate);
         canShoot = true;
     }
@@ -140,4 +136,105 @@ public class Gun : MonoBehaviour
         ammoInfoText.text = ammo + " / " + MAX_AMMO;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+quick break
+
+
+8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
