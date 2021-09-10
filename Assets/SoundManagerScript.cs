@@ -17,7 +17,7 @@ public class SoundManagerScript : MonoBehaviour
         audioSrc = GetComponent<AudioSource>();
     }
 
-    public static void PlaySound (string clip)
+    public static void PlaySound(string clip)
     {
         switch (clip)
         {
