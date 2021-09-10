@@ -50,18 +50,24 @@ public class PlayerController : MonoBehaviour
             Slide();
         }
 
+        if (!rolling && onGround && Input.GetKeyDown(KeyCode.LeftShift)) {
+            rolling = true;
+            rollDestination = transform.position;
+            rollDist = sr.flipX ? -Mathf.Abs(rollDist) : Mathf.Abs(rollDist);
+            rollDestination.x += rollDist;
+            StartCoroutine(StopRoll(0.5f));
+        }
+
         if (rolling) {
             animator.SetBool("isRolling", true);
             Roll();
         }
 
-        if(onGround && Input.GetKeyDown(KeyCode.C))
-        {
+        if (onGround && Input.GetKeyDown(KeyCode.C)) {
             Prone();
         }
 
-        if (onGround && horizontalDir == 0 && (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.LeftControl)))
-        {
+        if (onGround && horizontalDir == 0 && (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.LeftControl))) {
             Crouch();
         }
     }
@@ -91,6 +97,7 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(stopTime);
         rolling = false;
     }
+
     IEnumerator StopSlide(float stopTime)
     {
         yield return new WaitForSeconds(stopTime);

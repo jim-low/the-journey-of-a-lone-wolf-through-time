@@ -41,7 +41,7 @@ public class EnemyMovement : MonoBehaviour
         transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
         if (transform.position.x <= startPos.x || transform.position.x >= endPos.x) {
             pausing = true;
-            
+
             StartCoroutine(ChangeDirection());
         }
     }
