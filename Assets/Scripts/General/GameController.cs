@@ -25,13 +25,7 @@ public class GameController : MonoBehaviour
     public void TogglePauseGame()
     {
         paused = !paused;
-        if (paused) {
-            Time.timeScale = 0;
-        }
-        else {
-            Time.timeScale = 1;
-        }
-
+        Time.timeScale = paused ? 0 : 1;
         pauseMenu.SetActive(paused);
     }
 
