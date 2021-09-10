@@ -88,6 +88,8 @@ public class Gun : MonoBehaviour
             yield break;
         }
 
+        canShoot = false;
+
         RaycastHit2D[] hitInfo = Physics2D.RaycastAll(firePoint.position, firePoint.right);
 
         LineRenderer bulletLinePrefab = Instantiate(bulletLine);
@@ -100,20 +102,20 @@ public class Gun : MonoBehaviour
                 break;
             }
             else if (hitObject.collider.name.Equals("EnemyMedic") || hitObject.collider.CompareTag("Enemy")) {
-                bulletDestination = hitObject.point;
+                bulletDestination = hitObject.collider.transform.position;
                 Soldier soldier = hitObject.collider.gameObject.GetComponent<Soldier>();
                 if (soldier) {
                     soldier.Damage(damage);
                 }
                 break;
             }
-            else {
-                bulletDestination = hitObject.point;
-            }
         }
 
         bulletLinePrefab.SetPosition(1, bulletDestination);
 
+        bulletLinePrefab.enabled = true;
+        yield return new WaitForSeconds(0.02f);
+        bulletLinePrefab.enabled = false;
 
         Destroy(bulletLinePrefab.gameObject);
         --ammo;
@@ -123,7 +125,6 @@ public class Gun : MonoBehaviour
 
     IEnumerator Recoil()
     {
-        canShoot = false;
         yield return new WaitForSeconds(firingRate);
         canShoot = true;
     }
