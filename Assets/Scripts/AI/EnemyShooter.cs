@@ -57,7 +57,7 @@ public class EnemyShooter : MonoBehaviour
         playerPos.y += 1.75f;
         RaycastHit2D[] hitInfo = Physics2D.RaycastAll(firePoint.position, playerPos);
 
-        Vector2 bulletDestination = (Vector2)(firePoint.position + firePoint.right * 100);
+        Vector2 bulletDestination = (firePoint.position + firePoint.right * 100);
         foreach (RaycastHit2D hitObject in hitInfo) {
             if (hitObject.collider.name.Equals("Obstacle")) {
                 bulletDestination = hitObject.point;
@@ -65,7 +65,10 @@ public class EnemyShooter : MonoBehaviour
             }
             else if (hitObject.collider.CompareTag("Player")) {
                 bulletDestination = hitObject.transform.position;
-                hitObject.collider.GetComponent<Soldier>().Damage(damage);
+                Soldier soldier = hitObject.collider.GetComponent<Soldier>();
+                if (soldier) {
+                    soldier.Damage(damage);
+                }
                 break;
             }
             else {

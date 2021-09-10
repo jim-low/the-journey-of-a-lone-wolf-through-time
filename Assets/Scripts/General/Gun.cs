@@ -44,6 +44,7 @@ public class Gun : MonoBehaviour
         UpdateWeapon();
 
         if (canShoot && hasAmmo && Input.GetMouseButton(0)) {
+            gunSound.Play();
             StartCoroutine(Shoot());
         }
 
@@ -92,7 +93,7 @@ public class Gun : MonoBehaviour
         LineRenderer bulletLinePrefab = Instantiate(bulletLine);
         bulletLinePrefab.SetPosition(0, firePoint.position);
 
-        Vector2 bulletDestination = (Vector2)(firePoint.position + firePoint.right * 100);
+        Vector2 bulletDestination = (firePoint.position + (firePoint.right * 100));
         foreach (RaycastHit2D hitObject in hitInfo) {
             if (hitObject.collider.name.Equals("Obstacle")) {
                 bulletDestination = hitObject.point;
@@ -100,16 +101,18 @@ public class Gun : MonoBehaviour
             }
             else if (hitObject.collider.name.Equals("EnemyMedic") || hitObject.collider.CompareTag("Enemy")) {
                 bulletDestination = hitObject.point;
-                hitObject.collider.gameObject.GetComponent<Soldier>().Damage(damage);
+                Soldier soldier = hitObject.collider.gameObject.GetComponent<Soldier>();
+                if (soldier) {
+                    soldier.Damage(damage);
+                }
                 break;
             }
             else {
-                bulletDestination = (Vector2)hitObject.point;
+                bulletDestination = hitObject.point;
             }
         }
 
         bulletLinePrefab.SetPosition(1, bulletDestination);
-        gunSound.Play();
 
 
         Destroy(bulletLinePrefab.gameObject);
@@ -136,105 +139,4 @@ public class Gun : MonoBehaviour
         ammoInfoText.text = ammo + " / " + MAX_AMMO;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-quick break
-
-
-8
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
