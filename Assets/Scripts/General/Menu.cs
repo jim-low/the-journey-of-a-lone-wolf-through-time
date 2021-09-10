@@ -11,8 +11,6 @@ public class Menu : MonoBehaviour
     private GameObject mainMenu;
 
     public Slider BGMSlider;
-    // TODO: find out how to set game sound effect
-    public Slider soundEffectSlider;
 
     public AudioSource music;
 
@@ -29,6 +27,11 @@ public class Menu : MonoBehaviour
         mainMenu = GameObject.Find("MainMenuContainer");
         helpMenu = GameObject.Find("HowToPlayContainer");
         settingsMenu = GameObject.Find("SettingsContainer");
+
+        Debug.Log(mainMenu);
+        Debug.Log(helpMenu);
+        Debug.Log(settingsMenu);
+
         helpMenu.SetActive(false);
         settingsMenu.SetActive(false);
     }
@@ -43,24 +46,34 @@ public class Menu : MonoBehaviour
         music.volume = BGMSlider.value;
     }
 
-    public void SetSoundEffectVolume()
-    {
-    }
-
     public void ToggleHowToPlay()
     {
         helpOn = !helpOn;
+        settingsOn = false;
 
-        helpMenu.SetActive(helpOn);
         mainMenu.SetActive(!helpOn);
+        helpMenu.SetActive(helpOn);
+        settingsMenu.SetActive(false);
     }
 
     public void ToggleSettings()
     {
         settingsOn = !settingsOn;
+        helpOn = false;
 
-        settingsMenu.SetActive(settingsOn);
         mainMenu.SetActive(!settingsOn);
+        helpMenu.SetActive(false);
+        settingsMenu.SetActive(settingsOn);
+    }
+
+    public void Back()
+    {
+        settingsOn = false;
+        helpOn = false;
+
+        mainMenu.SetActive(true);
+        helpMenu.SetActive(false);
+        settingsMenu.SetActive(false);
     }
 
     public void QuitGame()
