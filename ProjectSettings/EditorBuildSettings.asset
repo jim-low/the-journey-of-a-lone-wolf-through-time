@@ -10,7 +10,7 @@ EditorBuildSettings:
     guid: c29e04dab090b295b9f292dd7317f2bf
   - enabled: 1
     path: Assets/Scenes/Ground.unity
-    guid: 66a5eaa1e84ebfc4c896ca674b18053e
+    guid: d3df7fa43ee82c9f9b4c254f4c687f7d
   - enabled: 1
     path: Assets/Scenes/Underground.unity
     guid: e70dcabfb2488f44f8d5e643d49bc8ad
@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Airship.unity
     guid: 69592172742c47a47960c1ddd8f78ceb
   - enabled: 1
-    path: Assets/Scenes/WInScreen.unity
+    path: Assets/Scenes/WinScreen.unity
     guid: 547cda467ad728dc6b74f4e7ab5cdeaf
   - enabled: 1
     path: Assets/Scenes/LoseScreen.unity

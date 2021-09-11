@@ -6,13 +6,13 @@ public class EnemyShooter : MonoBehaviour
 {
     public float damage = 3;
     public Transform firePoint;
-    public LineRenderer bulletLinePrefab;
     public float recoilTime = 0.125f;
 
     public int ammo = 30;
     private const int MAX_AMMO = 30;
     private const float RELOAD_TIME = 3f;
     private Enemy enemy;
+    private LineRenderer bulletLinePrefab;
     private Transform player;
 
     bool reloading = false;
@@ -24,6 +24,7 @@ public class EnemyShooter : MonoBehaviour
     {
         enemy = GetComponent<Enemy>();
         player = GameObject.Find("Player").GetComponent<Transform>();
+        bulletLinePrefab = GameObject.Find("BulletLine").GetComponent<LineRenderer>();
     }
 
     void LateUpdate()
@@ -52,7 +53,6 @@ public class EnemyShooter : MonoBehaviour
         }
 
         LineRenderer bulletLine = Instantiate(bulletLinePrefab);
-        Debug.Log(firePoint.transform.localEulerAngles);
         Vector2 playerPos = player.position;
         playerPos.y += 1.75f;
         RaycastHit2D[] hitInfo = Physics2D.RaycastAll(firePoint.position, playerPos);

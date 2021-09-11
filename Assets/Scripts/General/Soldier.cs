@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class Soldier : MonoBehaviour
 {
 
-    public static float moveSpeed = 5f;
+    public static float moveSpeed = 7f;
 
 
     //public Animator animator;
@@ -47,6 +48,7 @@ public class Soldier : MonoBehaviour
 
     public void Damage(float damage)
     {
+        Debug.Log(this.gameObject.name + " has been damaged");
         this.health -= damage;
 
         // get object references
@@ -57,12 +59,12 @@ public class Soldier : MonoBehaviour
         floatingText.text = "-" + damage;
         floatingText.color = Color.red;
 
+        // start countdown to destroy text
+        StartCoroutine(DestroyText(floatingTextObject));
+
         if (this.health <= 0) {
             Die();
         }
-
-        // start countdown to destroy text
-        StartCoroutine(DestroyText(floatingTextObject));
     }
 
     public IEnumerator Heal(float healAmount)
@@ -106,10 +108,14 @@ public class Soldier : MonoBehaviour
         Destroy(textObject);
     }
 
-    private void Die()
+    public void Die()
     {
-        Destroy(this);
-        // play die animation here
-        /* Destroy(gameObject); */
+        // play animation
+        Destroy(this.gameObject);
+
+        if (this.gameObject.CompareTag("Player")) {
+            Menu.prevSceneIndex = SceneManager.GetActiveScene().buildIndex;
+            SceneManager.LoadScene("LoseScreen");
+        }
     }
 }

@@ -31,15 +31,20 @@ public class Gun : MonoBehaviour
         weaponPosition = GetComponent<Transform>();
         weaponSprite = GetComponentInChildren<SpriteRenderer>();
         firePoint = GameObject.Find(gameObject.name + "FirePoint").transform;
-        bulletLine = GameObject.Find("BulletLine").GetComponent<LineRenderer>();
 
         reloadText = GameObject.Find("ReloadText").GetComponent<TextMeshProUGUI>();
         ammoInfoText = GameObject.Find("AmmoText").GetComponent<TextMeshProUGUI>();
         bulletLine = GameObject.Find("BulletLine").GetComponent<LineRenderer>();
+
+        Object.DontDestroyOnLoad(bulletLine);
     }
 
     void Update()
     {
+        if (GameController.paused) {
+            return;
+        }
+
         Aim();
         UpdateWeapon();
 
@@ -72,8 +77,7 @@ public class Gun : MonoBehaviour
         Vector3 aimDirection = (mousePos - transform.position).normalized;
         float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
 
-        weaponSprite.flipX = Mathf.Abs(angle) > 90;
-        weaponSprite.flipY = Mathf.Abs(angle) > 90;
+        weaponSprite.flipX = weaponSprite.flipY = Mathf.Abs(angle) > 90;
 
         Vector3 scale = weaponSprite.transform.localScale;
         scale.x = Mathf.Abs(angle) > 90 ? -Mathf.Abs(scale.x) : Mathf.Abs(scale.x);
