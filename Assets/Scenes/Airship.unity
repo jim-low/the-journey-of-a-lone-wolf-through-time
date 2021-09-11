@@ -41973,6 +41973,63 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+--- !u!1001 &683243768
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1695631006367800965, guid: 6daf442dcb4118f5ab2019bd13951b96, type: 3}
+      propertyPath: m_Name
+      value: BulletLine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1695631006367800967, guid: 6daf442dcb4118f5ab2019bd13951b96, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1695631006367800967, guid: 6daf442dcb4118f5ab2019bd13951b96, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.61938095
+      objectReference: {fileID: 0}
+    - target: {fileID: 1695631006367800967, guid: 6daf442dcb4118f5ab2019bd13951b96, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.047204375
+      objectReference: {fileID: 0}
+    - target: {fileID: 1695631006367800967, guid: 6daf442dcb4118f5ab2019bd13951b96, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10.760454
+      objectReference: {fileID: 0}
+    - target: {fileID: 1695631006367800967, guid: 6daf442dcb4118f5ab2019bd13951b96, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1695631006367800967, guid: 6daf442dcb4118f5ab2019bd13951b96, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1695631006367800967, guid: 6daf442dcb4118f5ab2019bd13951b96, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1695631006367800967, guid: 6daf442dcb4118f5ab2019bd13951b96, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1695631006367800967, guid: 6daf442dcb4118f5ab2019bd13951b96, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1695631006367800967, guid: 6daf442dcb4118f5ab2019bd13951b96, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1695631006367800967, guid: 6daf442dcb4118f5ab2019bd13951b96, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6daf442dcb4118f5ab2019bd13951b96, type: 3}
 --- !u!1 &791882904
 GameObject:
   m_ObjectHideFlags: 0
@@ -44529,6 +44586,76 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3df7ea330c8cc49d0bec68208f96f327, type: 3}
+--- !u!1 &1154863470
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1154863473}
+  - component: {fileID: 1154863472}
+  - component: {fileID: 1154863471}
+  m_Layer: 0
+  m_Name: InstantDeathCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1154863471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1154863470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 346008ab44423cbf58a7176bfddf8b96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &1154863472
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1154863470}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 55.154755, y: 6.4534817}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 287.8047, y: 5.2022667}
+  m_EdgeRadius: 0
+--- !u!4 &1154863473
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1154863470}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 19.258059, y: -46.6, z: 15.900547}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1177427700
 PrefabInstance:
   m_ObjectHideFlags: 0

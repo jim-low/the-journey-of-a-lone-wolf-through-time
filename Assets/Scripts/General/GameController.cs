@@ -8,12 +8,6 @@ public class GameController : MonoBehaviour
     private GameObject pauseMenu;
     public static bool paused = false;
 
-    void Awake()
-    {
-        GameObject bulletLine = GameObject.Find("BulletLine");
-        Object.DontDestroyOnLoad(bulletLine);
-    }
-
     void Start()
     {
         pauseMenu = GameObject.Find("PauseMenu");

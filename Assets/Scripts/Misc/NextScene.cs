@@ -17,10 +17,16 @@ public class NextScene : MonoBehaviour
         }
     }
 
+    private bool CheckWin()
+    {
+        return GameObject.FindGameObjectsWithTag("Enemy").Length == 0;
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") && CheckWin())
         {
+            Menu.prevSceneIndex = SceneManager.GetActiveScene().buildIndex;
             StartCoroutine(GoNextLevel());
         }
     }

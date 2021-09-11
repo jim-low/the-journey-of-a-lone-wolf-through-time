@@ -10,6 +10,7 @@ TagManager:
   - Slider
   - Boundary
   - Enemy
+  - InstantDeath
   layers:
   - Default
   - TransparentFX

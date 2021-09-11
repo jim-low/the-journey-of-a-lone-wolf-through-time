@@ -114,7 +114,9 @@ public class Soldier : MonoBehaviour
         Destroy(this.gameObject);
 
         if (this.gameObject.CompareTag("Player")) {
+            Debug.Log(Menu.prevSceneIndex);
             Menu.prevSceneIndex = SceneManager.GetActiveScene().buildIndex;
+            Debug.Log(Menu.prevSceneIndex);
             SceneManager.LoadScene("LoseScreen");
         }
     }
