@@ -7,6 +7,7 @@ public class EnemyShooter : MonoBehaviour
     public float damage = 3;
     public Transform firePoint;
     public float recoilTime = 0.125f;
+    [SerializeField] private AudioSource shoot;
 
     public int ammo = 30;
     private const int MAX_AMMO = 30;
@@ -17,8 +18,6 @@ public class EnemyShooter : MonoBehaviour
 
     bool reloading = false;
     bool canShoot = true;
-
-    float angle = 0;
 
     void Start()
     {
@@ -47,6 +46,8 @@ public class EnemyShooter : MonoBehaviour
         if (reloading || !canShoot) {
             yield break;
         }
+
+        shoot.Play();
 
         RaycastHit2D[] hitInfo = Physics2D.RaycastAll(firePoint.position, (player.position - firePoint.position));
 
