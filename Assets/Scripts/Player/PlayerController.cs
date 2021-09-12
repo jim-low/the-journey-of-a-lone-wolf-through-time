@@ -8,7 +8,6 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 5f;
     public float slidingSpeed = 10f;
     public float rollDist = 7f;
-    public GameObject grenadePrefab;
     [SerializeField] private AudioSource roll;
     [SerializeField] private AudioSource slide;
 
@@ -23,7 +22,6 @@ public class PlayerController : MonoBehaviour
     bool prone = true;
     bool crouch = true;
     float horizontalDir;
-    float grenadeThrowForce = 15f;
 
     void Start()
     {
