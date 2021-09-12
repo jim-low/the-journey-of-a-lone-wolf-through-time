@@ -98,9 +98,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 516416649
+  m_SortingLayer: 2
+  m_SortingOrder: 6
   m_Sprite: {fileID: 2477708518685008648, guid: 0bf8c2c603e504c47a9cdfddd35b9587, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -244,8 +244,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f81f8a7cc8a62916ae2c8ac498b49ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followRange: 20
-  animator: {fileID: 0}
 --- !u!114 &4394070779189887708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -261,7 +259,6 @@ MonoBehaviour:
   patrolDistance: 5
   MOVE_SPEED: 5
   moveSpeed: 5
-  animator: {fileID: 0}
   pauseSeconds: 1
 --- !u!114 &4394070779189887683
 MonoBehaviour:
@@ -277,7 +274,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 3
   firePoint: {fileID: 4394070778663012229}
-  bulletLinePrefab: {fileID: 0}
   recoilTime: 0.125
   ammo: 30
 --- !u!50 &4394070779189887707
