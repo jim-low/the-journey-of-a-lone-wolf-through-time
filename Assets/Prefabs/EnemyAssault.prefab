@@ -275,10 +275,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 919c4447b6bcc4a0190283b1bac48103, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0.01
+  damage: 1
   firePoint: {fileID: 4394070778663012229}
   recoilTime: 0.125
-  ammo: 30
+  ammo: 12
 --- !u!50 &4394070779189887707
 Rigidbody2D:
   serializedVersion: 4
@@ -390,9 +390,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 11.062323, y: 0}
+  m_Offset: {x: 8.170977, y: 0}
   serializedVersion: 2
-  m_Radius: 12.154949
+  m_Radius: 9.263643
 --- !u!114 &4394070779649033341
 MonoBehaviour:
   m_ObjectHideFlags: 0

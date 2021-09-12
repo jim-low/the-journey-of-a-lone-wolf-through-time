@@ -75,7 +75,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 14.714144, y: 2.6839652}
+  m_Offset: {x: 30.093353, y: -24.845526}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -86,7 +86,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 30.428288, y: 9.075646}
+  m_Size: {x: 31.09903, y: 43.348072}
   m_EdgeRadius: 0
 --- !u!114 &1937565227
 MonoBehaviour:
@@ -198,10 +198,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 919c4447b6bcc4a0190283b1bac48103, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 3
+  damage: 1.25
   firePoint: {fileID: 1845786302}
-  bulletLinePrefab: {fileID: 0}
-  recoilTime: 0.125
+  recoilTime: 0.175
   ammo: 30
 --- !u!114 &178674349848329671
 MonoBehaviour:
@@ -215,7 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75e6596e651685c9ea532ad51a44e365, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 250
 --- !u!114 &7233629559188449805
 MonoBehaviour:
   m_ObjectHideFlags: 0

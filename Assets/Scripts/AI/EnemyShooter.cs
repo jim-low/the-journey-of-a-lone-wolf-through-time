@@ -48,13 +48,12 @@ public class EnemyShooter : MonoBehaviour
             yield break;
         }
 
-        Vector2 playerPos = player.position;
-        playerPos.y += 1.75f;
-        RaycastHit2D[] hitInfo = Physics2D.RaycastAll(firePoint.position, playerPos);
+        RaycastHit2D[] hitInfo = Physics2D.RaycastAll(firePoint.position, (player.position - firePoint.position));
 
         Vector2 bulletDestination = Vector2.zero;
         foreach (RaycastHit2D hitObject in hitInfo) {
             Debug.Log(hitObject.collider.name);
+            Debug.Log(hitObject.collider.tag);
             if (hitObject.collider.name.Equals("Obstacle") || hitObject.collider.CompareTag("Obstacle")) {
                 bulletDestination = hitObject.point;
                 break;

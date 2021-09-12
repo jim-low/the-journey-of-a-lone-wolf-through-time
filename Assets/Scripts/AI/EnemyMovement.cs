@@ -33,7 +33,6 @@ public class EnemyMovement : MonoBehaviour
         if (!pausing) {
             Move();
         }
-        Debug.Log(animator.GetBool("isMoving"));
     }
 
     void Move()

@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 5f;
     public float slidingSpeed = 10f;
     public float rollDist = 7f;
+    public float moveSpeed = 7f;
     [SerializeField] private AudioSource roll;
     [SerializeField] private AudioSource slide;
 
@@ -87,7 +88,7 @@ public class PlayerController : MonoBehaviour
     {
         horizontalDir = Input.GetAxisRaw("Horizontal");
 
-        transform.position += new Vector3(horizontalDir, 0, 0) * Soldier.moveSpeed * Time.deltaTime;
+        transform.position += new Vector3(horizontalDir, 0, 0) * moveSpeed * Time.deltaTime;
     }
 
     void Jump()
@@ -120,7 +121,7 @@ public class PlayerController : MonoBehaviour
     void Roll()
     {
         const float rollScalar = 2f;
-        float rollSpeed = Soldier.moveSpeed * rollScalar * Time.deltaTime;
+        float rollSpeed = moveSpeed * rollScalar * Time.deltaTime;
 
         transform.position = Vector3.MoveTowards(transform.position, rollDestination, rollSpeed);
     }
