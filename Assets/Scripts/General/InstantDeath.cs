@@ -8,6 +8,7 @@ public class InstantDeath : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.CompareTag("Player")) {
+            Menu.prevSceneIndex = SceneManager.GetActiveScene().buildIndex;
             SceneManager.LoadScene("LoseScreen");
         }
         else if (collider.CompareTag("Enemy")) {
