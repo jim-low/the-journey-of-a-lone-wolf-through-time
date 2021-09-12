@@ -42032,6 +42032,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5050921169311968040, guid: ae2f986d329adefce9b8fa02a011cdac, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5057735431282017025, guid: ae2f986d329adefce9b8fa02a011cdac, type: 3}
       propertyPath: m_Name
       value: Turret
@@ -42111,6 +42115,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyAssault (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4394070779189887683, guid: 7473b42ede92555bca6a6d3c2260b5c6, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4394070779189887705, guid: 7473b42ede92555bca6a6d3c2260b5c6, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -42157,7 +42165,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4394070779189887708, guid: 7473b42ede92555bca6a6d3c2260b5c6, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4394070779189887709, guid: 7473b42ede92555bca6a6d3c2260b5c6, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7473b42ede92555bca6a6d3c2260b5c6, type: 3}
@@ -45516,7 +45528,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 30803634, guid: 0c69777264eb1b01dbc7fb11cf2fc9f0, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8240842094453282225, guid: 0c69777264eb1b01dbc7fb11cf2fc9f0, type: 3}
       propertyPath: m_RootOrder
@@ -45745,7 +45757,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7338272580747281854, guid: a06bb6361e8c5d24aad4e30574d1c630, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7338272580747281855, guid: a06bb6361e8c5d24aad4e30574d1c630, type: 3}
       propertyPath: m_RootOrder
@@ -45928,6 +45940,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyAssault (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4394070779189887683, guid: 7473b42ede92555bca6a6d3c2260b5c6, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4394070779189887705, guid: 7473b42ede92555bca6a6d3c2260b5c6, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -45974,7 +45990,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4394070779189887708, guid: 7473b42ede92555bca6a6d3c2260b5c6, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4394070779189887709, guid: 7473b42ede92555bca6a6d3c2260b5c6, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7473b42ede92555bca6a6d3c2260b5c6, type: 3}
@@ -46103,6 +46123,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5050921169311968040, guid: ae2f986d329adefce9b8fa02a011cdac, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5057735431282017025, guid: ae2f986d329adefce9b8fa02a011cdac, type: 3}
       propertyPath: m_Name
       value: Turret (1)
@@ -46160,7 +46184,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7338272580747281854, guid: a06bb6361e8c5d24aad4e30574d1c630, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7338272580747281855, guid: a06bb6361e8c5d24aad4e30574d1c630, type: 3}
       propertyPath: m_RootOrder
@@ -46219,6 +46243,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyAssault
       objectReference: {fileID: 0}
+    - target: {fileID: 4394070779189887683, guid: 7473b42ede92555bca6a6d3c2260b5c6, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4394070779189887705, guid: 7473b42ede92555bca6a6d3c2260b5c6, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -46265,7 +46293,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4394070779189887708, guid: 7473b42ede92555bca6a6d3c2260b5c6, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4394070779189887709, guid: 7473b42ede92555bca6a6d3c2260b5c6, type: 3}
       propertyPath: m_Enabled

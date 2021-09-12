@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Underground.unity
     guid: e70dcabfb2488f44f8d5e643d49bc8ad
   - enabled: 1
-    path: Assets/Scenes/Airship.unity
+    path: Assets/Scenes/Sky.unity
     guid: 69592172742c47a47960c1ddd8f78ceb
   - enabled: 1
     path: Assets/Scenes/WinScreen.unity
