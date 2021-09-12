@@ -101,7 +101,7 @@ public class Gun : MonoBehaviour
 
         Vector2 bulletDestination = (firePoint.position + (firePoint.right * 100));
         foreach (RaycastHit2D hitObject in hitInfo) {
-            if (hitObject.collider.name.Equals("Obstacle")) {
+            if (hitObject.collider.name.Equals("Obstacle") || hitObject.collider.CompareTag("Obstacle")) {
                 bulletDestination = hitObject.point;
                 break;
             }

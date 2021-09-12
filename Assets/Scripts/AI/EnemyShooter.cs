@@ -32,13 +32,6 @@ public class EnemyShooter : MonoBehaviour
         if (enemy.hasDetectedPlayer && canShoot && !reloading) {
             StartCoroutine(Shoot());
         }
-
-        if (enemy.hasDetectedPlayer) {
-            Debug.Log("player has been detected by " + gameObject.name);
-        }
-        else {
-            Debug.Log(gameObject.name + " has lost the player");
-        }
     }
 
     IEnumerator Reload()
@@ -59,16 +52,15 @@ public class EnemyShooter : MonoBehaviour
         playerPos.y += 1.75f;
         RaycastHit2D[] hitInfo = Physics2D.RaycastAll(firePoint.position, playerPos);
 
-        /* Vector2 bulletDestination = (firePoint.position + firePoint.right * 100 * transform.localScale.x); */
         Vector2 bulletDestination = Vector2.zero;
         foreach (RaycastHit2D hitObject in hitInfo) {
-            if (hitObject.collider.name.Equals("Obstacle")) {
+            Debug.Log(hitObject.collider.name);
+            if (hitObject.collider.name.Equals("Obstacle") || hitObject.collider.CompareTag("Obstacle")) {
                 bulletDestination = hitObject.point;
                 break;
             }
             else if (hitObject.collider.CompareTag("Player")) {
                 bulletDestination = hitObject.transform.position;
-                /* bulletDestination = hitObject.point; */
                 Soldier soldier = hitObject.collider.GetComponent<Soldier>();
                 if (soldier) {
                     soldier.Damage(damage);
