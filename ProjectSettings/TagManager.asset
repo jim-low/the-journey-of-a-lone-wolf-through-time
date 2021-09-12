@@ -12,6 +12,7 @@ TagManager:
   - Enemy
   - InstantDeath
   - BulletLine
+  - Obstacle
   layers:
   - Default
   - TransparentFX
