@@ -7,7 +7,7 @@ public class EnemyMovement : MonoBehaviour
     public float patrolDistance = 1f;
     public float MOVE_SPEED;
     public float moveSpeed;
-    /* public Animator animator; */
+    public Animator animator;
 
     [Range(1, 3)]
     public float pauseSeconds = 1f;
@@ -33,11 +33,12 @@ public class EnemyMovement : MonoBehaviour
         if (!pausing) {
             Move();
         }
+        Debug.Log(animator.GetBool("isMoving"));
     }
 
     void Move()
     {
-        /* animator.SetBool("isMoving", true); */
+        animator.SetBool("isMoving", true);
         transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
         if (transform.position.x <= startPos.x || transform.position.x >= endPos.x) {
             pausing = true;
@@ -48,8 +49,8 @@ public class EnemyMovement : MonoBehaviour
 
     IEnumerator ChangeDirection()
     {
+        animator.SetBool("isMoving", false);
         yield return new WaitForSeconds(pauseSeconds);
-        /* animator.SetBool("isMoving", false); */
         Vector3 currentScale = transform.localScale;
         currentScale.x *= -1;
         transform.localScale = currentScale;

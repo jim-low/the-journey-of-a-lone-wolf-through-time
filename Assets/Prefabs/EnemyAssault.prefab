@@ -129,6 +129,7 @@ GameObject:
   - component: {fileID: 4394070779189887683}
   - component: {fileID: 4394070779189887707}
   - component: {fileID: 4394070779189887706}
+  - component: {fileID: 338599669}
   m_Layer: 0
   m_Name: EnemyAssault
   m_TagString: Enemy
@@ -244,6 +245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f81f8a7cc8a62916ae2c8ac498b49ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 338599669}
 --- !u!114 &4394070779189887708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -259,6 +261,7 @@ MonoBehaviour:
   patrolDistance: 5
   MOVE_SPEED: 5
   moveSpeed: 5
+  animator: {fileID: 338599669}
   pauseSeconds: 1
 --- !u!114 &4394070779189887683
 MonoBehaviour:
@@ -272,7 +275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 919c4447b6bcc4a0190283b1bac48103, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 3
+  damage: 0.01
   firePoint: {fileID: 4394070778663012229}
   recoilTime: 0.125
   ammo: 30
@@ -323,6 +326,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3, y: 4.8}
   m_EdgeRadius: 0
+--- !u!95 &338599669
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4394070779189887682}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 98dd797b864b818428e4c70c284156ac, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4394070779649033315
 GameObject:
   m_ObjectHideFlags: 0

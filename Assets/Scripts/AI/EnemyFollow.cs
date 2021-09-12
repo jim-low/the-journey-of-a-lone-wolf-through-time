@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyFollow : MonoBehaviour
 {
-    /* public Animator animator; */
+    public Animator animator;
 
     private float followRange = 20f;
     private Enemy enemy;
@@ -33,12 +33,17 @@ public class EnemyFollow : MonoBehaviour
         }
     }
 
+
     void MoveEnemy()
     {
         int direction = (transform.position.x - playerPos.x) < 0 ? 1 : -1; // -1 = left, 1 = right
-
         if (Mathf.Abs(transform.position.x - playerPos.x) >= followRange) {
+            animator.SetBool("isMoving", true);
             transform.Translate(new Vector3(Soldier.moveSpeed * direction, 0, 0) * Time.deltaTime);
+        }
+        else
+        {
+            animator.SetBool("isMoving", false);
         }
     }
 
