@@ -1592,14 +1592,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1720526539139982644, guid: 357b04dfb35b44f428364e3e8c10fd6a, type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1720526539139982644, guid: 357b04dfb35b44f428364e3e8c10fd6a, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 516416649
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 357b04dfb35b44f428364e3e8c10fd6a, type: 3}
 --- !u!1001 &1408677537
@@ -68473,6 +68465,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 718327060}
     m_Modifications:
+    - target: {fileID: 1937565225, guid: ae2f986d329adefce9b8fa02a011cdac, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1937565226, guid: ae2f986d329adefce9b8fa02a011cdac, type: 3}
       propertyPath: m_Size.y
       value: 23.37486

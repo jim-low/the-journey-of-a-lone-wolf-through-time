@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Melee : MonoBehaviour
 {
-    public Animator animator;
+    /* public Animator animator; */
     private Enemy enemy;
     private static float knifeDamage = 20f;
     private static float cooldown = 1f;
@@ -21,15 +21,15 @@ public class Melee : MonoBehaviour
         {
             yield break;
         }
-        
+
         yield return new WaitForSeconds(cooldown);
-        animator.SetBool("isAttacking", true);
+        /* animator.SetBool("isAttacking", true); */
         if (!enemy.hasDetectedPlayer)
         {
             yield break;
         }
         yield return new WaitForSeconds(cooldown);
-        animator.SetBool("isAttacking", false);
+        /* animator.SetBool("isAttacking", false); */
         soldier.Damage(knifeDamage);
         StartCoroutine(Attack(soldier));
     }

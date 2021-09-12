@@ -48,7 +48,6 @@ public class Soldier : MonoBehaviour
 
     public void Damage(float damage)
     {
-        Debug.Log(this.gameObject.name + " has been damaged");
         this.health -= damage;
 
         // get object references
@@ -114,9 +113,7 @@ public class Soldier : MonoBehaviour
         Destroy(this.gameObject);
 
         if (this.gameObject.CompareTag("Player")) {
-            Debug.Log(Menu.prevSceneIndex);
             Menu.prevSceneIndex = SceneManager.GetActiveScene().buildIndex;
-            Debug.Log(Menu.prevSceneIndex);
             SceneManager.LoadScene("LoseScreen");
         }
     }

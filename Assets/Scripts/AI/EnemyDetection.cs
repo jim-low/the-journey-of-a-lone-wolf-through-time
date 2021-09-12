@@ -10,6 +10,7 @@ public class EnemyDetection : MonoBehaviour
     {
         enemy = transform.parent.GetComponent<Enemy>();
     }
+
     void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.CompareTag("Player")) {

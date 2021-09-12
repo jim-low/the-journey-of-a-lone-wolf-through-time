@@ -27,19 +27,22 @@ public class EnemyShooter : MonoBehaviour
         bulletLinePrefab = GameObject.Find("BulletLine").GetComponent<LineRenderer>();
     }
 
-    void LateUpdate()
+    void Update()
     {
         if (enemy.hasDetectedPlayer && canShoot && !reloading) {
             StartCoroutine(Shoot());
+        }
+
+        if (enemy.hasDetectedPlayer) {
+            Debug.Log("player has been detected by " + gameObject.name);
+        }
+        else {
+            Debug.Log(gameObject.name + " has lost the player");
         }
     }
 
     IEnumerator Reload()
     {
-        if (reloading) {
-            yield return null;
-        }
-
         yield return new WaitForSeconds(RELOAD_TIME);
         ammo = MAX_AMMO;
         reloading = false;
@@ -52,12 +55,12 @@ public class EnemyShooter : MonoBehaviour
             yield break;
         }
 
-        LineRenderer bulletLine = Instantiate(bulletLinePrefab);
         Vector2 playerPos = player.position;
         playerPos.y += 1.75f;
         RaycastHit2D[] hitInfo = Physics2D.RaycastAll(firePoint.position, playerPos);
 
-        Vector2 bulletDestination = (firePoint.position + firePoint.right * 100);
+        /* Vector2 bulletDestination = (firePoint.position + firePoint.right * 100 * transform.localScale.x); */
+        Vector2 bulletDestination = Vector2.zero;
         foreach (RaycastHit2D hitObject in hitInfo) {
             if (hitObject.collider.name.Equals("Obstacle")) {
                 bulletDestination = hitObject.point;
@@ -65,20 +68,22 @@ public class EnemyShooter : MonoBehaviour
             }
             else if (hitObject.collider.CompareTag("Player")) {
                 bulletDestination = hitObject.transform.position;
+                /* bulletDestination = hitObject.point; */
                 Soldier soldier = hitObject.collider.GetComponent<Soldier>();
                 if (soldier) {
                     soldier.Damage(damage);
                 }
                 break;
             }
-            else {
-                bulletDestination = hitObject.point;
-            }
-
         }
+        if (bulletDestination == Vector2.zero) {
+            yield break;
+        }
+
         canShoot = false;
         yield return new WaitForSeconds(recoilTime);
 
+        LineRenderer bulletLine = Instantiate(bulletLinePrefab);
         bulletLine.SetPosition(0, firePoint.position);
         bulletLine.SetPosition(1, bulletDestination);
 

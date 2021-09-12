@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class EnemyFollow : MonoBehaviour
 {
-    public float followRange = 20f;
     /* public Animator animator; */
 
-    private EnemyMovement enemyMovement;
+    private float followRange = 20f;
     private Enemy enemy;
     private Vector3 playerPos;
 
@@ -16,33 +15,41 @@ public class EnemyFollow : MonoBehaviour
     void Start()
     {
         enemy = GetComponent<Enemy>();
-        enemyMovement = GetComponent<EnemyMovement>();
         playerPos = GameObject.Find("Player").transform.position;
+        if (!enemy.type.Equals("Knife")) {
+            followRange = GetComponentInChildren<CircleCollider2D>().radius;
+        }
     }
 
     void Update()
     {
+        playerPos = GameObject.Find("Player").transform.position;
         if (!following) {
             DeterminePlayerDistance();
         }
-
-        playerPos = GameObject.Find("Player").transform.position;
-        Vector3 scale = transform.localScale;
-        if (following && Mathf.Abs(transform.position.x - playerPos.x) >= followRange) {
-            /* animator.SetBool("isMoving", true); */
-            if (transform.position.x < playerPos.x) {
-                transform.Translate(new Vector3(Soldier.moveSpeed, 0, 0) * Time.deltaTime);
-                scale.x = Mathf.Abs(scale.x);
-            }
-            else {
-                transform.Translate(new Vector3(-Soldier.moveSpeed, 0, 0) * Time.deltaTime);
-                scale.x = -Mathf.Abs(scale.x);
-            }
-
+        else {
+            FacePlayer();
+            MoveEnemy();
         }
-        else
-        {
-            /* animator.SetBool("isMoving", false); */
+    }
+
+    void MoveEnemy()
+    {
+        int direction = (transform.position.x - playerPos.x) < 0 ? 1 : -1; // -1 = left, 1 = right
+
+        if (Mathf.Abs(transform.position.x - playerPos.x) >= followRange) {
+            transform.Translate(new Vector3(Soldier.moveSpeed * direction, 0, 0) * Time.deltaTime);
+        }
+    }
+
+    void FacePlayer()
+    {
+        Vector3 scale = transform.localScale;
+        if (transform.position.x < playerPos.x) {
+            scale.x = Mathf.Abs(scale.x);
+        }
+        else {
+            scale.x = -Mathf.Abs(scale.x);
         }
         transform.localScale = scale;
     }
@@ -51,9 +58,9 @@ public class EnemyFollow : MonoBehaviour
     {
         float distance = Vector3.Distance(transform.position, playerPos);
 
-        if (distance < followRange) {
+        if (distance <= followRange) {
             following = true;
-            enemyMovement.enabled = false;
+            gameObject.GetComponent<EnemyMovement>().enabled = false;
             if (enemy.type.Equals("Knife"))
             {
                 followRange = 2f;
